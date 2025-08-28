@@ -22,12 +22,12 @@ export default function Home() {
           fontSize: '3.2em',
           lineHeight: '1.1'
         }}>
-          Hello Next.js!
+          GTR Web
         </h1>
         <p style={{
           color: '#888'
         }}>
-          GTR Web Application built with Next.js
+          Aplicación web GTR construida con Next.js
         </p>
       </div>
     </main>
