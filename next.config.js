@@ -8,6 +8,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   distDir: 'build',
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
