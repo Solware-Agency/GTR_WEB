@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -7,7 +10,7 @@ const nextConfig = {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
-  distDir: 'build',
+  distDir: 'out',
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
