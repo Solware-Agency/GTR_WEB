@@ -140,39 +140,39 @@ export default function TradingRoomPage() {
                 </h3>
                 
                 <div className="grid md:grid-cols-3 gap-8">
-                  <Card className="text-center">
+                  <Card className="text-center transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:bg-blue-50 hover:border-blue-200 cursor-pointer group">
                     <CardContent className="p-6">
-                      <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-blue-600">1</span>
+                      <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-blue-200 group-hover:scale-110">
+                        <span className="text-2xl font-bold text-blue-600 transition-colors duration-300 group-hover:text-blue-700">1</span>
                       </div>
-                      <h4 className="font-bold text-trading-black mb-3">Registro HFM</h4>
-                      <p className="text-gray-600 text-sm mb-4">
+                      <h4 className="font-bold text-trading-black mb-3 transition-colors duration-300 group-hover:text-blue-800">Registro HFM</h4>
+                      <p className="text-gray-600 text-sm mb-4 transition-colors duration-300 group-hover:text-gray-700">
                         Abre tu cuenta en HFM con nuestro IB 30435151 y realiza tu depósito inicial.
                       </p>
                       <BotonRegistroHFM />
                     </CardContent>
                   </Card>
 
-                  <Card className="text-center">
+                  <Card className="text-center transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:bg-green-50 hover:border-green-200 cursor-pointer group">
                     <CardContent className="p-6">
-                      <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-green-600">2</span>
+                      <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200 group-hover:scale-110">
+                        <span className="text-2xl font-bold text-green-600 transition-colors duration-300 group-hover:text-green-700">2</span>
                       </div>
-                      <h4 className="font-bold text-trading-black mb-3">Validación</h4>
-                      <p className="text-gray-600 text-sm mb-4">
+                      <h4 className="font-bold text-trading-black mb-3 transition-colors duration-300 group-hover:text-green-800">Validación</h4>
+                      <p className="text-gray-600 text-sm mb-4 transition-colors duration-300 group-hover:text-gray-700">
                         Completa el formulario de validación con tus datos de HFM.
                       </p>
                       <BotonValidacion />
                     </CardContent>
                   </Card>
 
-                  <Card className="text-center">
+                  <Card className="text-center transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:bg-yellow-50 hover:border-yellow-200 cursor-pointer group">
                     <CardContent className="p-6">
-                      <div className="w-16 h-16 bg-trading-gold bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-trading-gold">3</span>
+                      <div className="w-16 h-16 bg-trading-gold bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-trading-gold group-hover:bg-opacity-40 group-hover:scale-110">
+                        <span className="text-2xl font-bold text-trading-gold transition-colors duration-300 group-hover:text-yellow-700">3</span>
                       </div>
-                      <h4 className="font-bold text-trading-black mb-3">Acceso</h4>
-                      <p className="text-gray-600 text-sm mb-4">
+                      <h4 className="font-bold text-trading-black mb-3 transition-colors duration-300 group-hover:text-yellow-800">Acceso</h4>
+                      <p className="text-gray-600 text-sm mb-4 transition-colors duration-300 group-hover:text-gray-700">
                         En ≤ 24h recibes por correo el acceso al GTR y AlphaCopilot.
                       </p>
                       <BotonTutorial />
