@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/trayectoria/page": "app/trayectoria/page.js",
+  "/trading-room/page": "app/trading-room/page.js",
+  "/sobre-danny/page": "app/sobre-danny/page.js"
+}

@@ -1,6 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[810],{68291:function(e,n,r){"use strict";r.d(n,{Z:function(){return s}});var t=r(9116);/**
- * @license lucide-react v0.446.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */let s=(0,t.Z)("ArrowRight",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]])},51718:function(e,n,r){Promise.resolve().then(r.bind(r,39168)),Promise.resolve().then(r.bind(r,380)),Promise.resolve().then(r.bind(r,64116)),Promise.resolve().then(r.bind(r,25370))},39168:function(e,n,r){"use strict";r.r(n),r.d(n,{default:function(){return i}});var t=r(57437);r(2265);var s=r(93023),o=r(68291);function i(e){let{enlace:n,className:r}=e;return(0,t.jsxs)(s.z,{className:r,onClick:()=>{n?window.open(n,"_blank"):window.open("https://forms.globaltradingroom.com/","_blank")},children:[n?"Ver Detalles":"Unirse al GTR",(0,t.jsx)(o.Z,{className:"w-5 h-5 ml-2"})]})}}},function(e){e.O(0,[230,410,548,971,864,744],function(){return e(e.s=51718)}),_N_E=e.O()}]);
