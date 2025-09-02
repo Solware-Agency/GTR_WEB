@@ -1,5 +1,5 @@
 1:HL["/_next/static/css/45e52977b31a4239.css","style"]
-0:["k066Y8eTtr4aHHUnJ5kq3",[[["",{"children":["cursos",{"children":[["slug","fundamentos-trading","d"],{"children":["__PAGE__?{\"slug\":\"fundamentos-trading\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/45e52977b31a4239.css","precedence":"next"}]],"$L3"]]]]
+0:["w10b8sTgJXjoRWE5OugcF",[[["",{"children":["cursos",{"children":[["slug","fundamentos-trading","d"],{"children":["__PAGE__?{\"slug\":\"fundamentos-trading\"}",{}]}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/45e52977b31a4239.css","precedence":"next"}]],"$L3"]]]]
 4:I{"id":90158,"chunks":["230:static/chunks/230-700cc921536ec7db.js","89:static/chunks/89-bb4be919fa7dbadd.js","185:static/chunks/app/layout-1ee81f3826da81dd.js"],"name":"","async":false}
 5:I{"id":10309,"chunks":["230:static/chunks/230-700cc921536ec7db.js","410:static/chunks/410-bf724e2738092606.js","548:static/chunks/548-eba26ab784238210.js","931:static/chunks/app/page-a088cbb6c66f0670.js"],"name":"","async":false}
 6:I{"id":81443,"chunks":["272:static/chunks/webpack-d834007024e07ecb.js","971:static/chunks/fd9d1056-3e1cb712a9aa9fee.js","864:static/chunks/864-ba6cb21a1b688b34.js"],"name":"","async":false}
