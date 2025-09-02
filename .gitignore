@@ -94,3 +94,14 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Generated sitemap and robots files
+public/sitemap.xml
+public/robots.txt
+
+# Performance and analysis reports
+lighthouse-report.json
+*.lighthouse.json
+
+# Build analysis files
+bundle-analyzer-report.html

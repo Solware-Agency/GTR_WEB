@@ -104,35 +104,43 @@ export default function CursosPage() {
 
               {/* Estadísticas */}
               <div className="grid md:grid-cols-4 gap-6 mb-16">
-                <Card className="text-center">
+                <Card className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-trading-gold/20 hover:border-trading-gold/50 border-2 border-transparent">
                   <CardContent className="p-6">
-                    <BookOpen className="w-8 h-8 text-trading-gold mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-trading-black">25+</div>
-                    <div className="text-sm text-gray-600">Clases Grabadas</div>
+                    <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <BookOpen className="w-8 h-8 text-trading-gold mx-auto mb-3" />
+                    </div>
+                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">25+</div>
+                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Clases Grabadas</div>
                   </CardContent>
                 </Card>
                 
-                <Card className="text-center">
+                <Card className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-trading-gold/20 hover:border-trading-gold/50 border-2 border-transparent">
                   <CardContent className="p-6">
-                    <Clock className="w-8 h-8 text-trading-gold mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-trading-black">15h+</div>
-                    <div className="text-sm text-gray-600">Contenido Total</div>
+                    <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-rotate-3">
+                      <Clock className="w-8 h-8 text-trading-gold mx-auto mb-3" />
+                    </div>
+                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">15h+</div>
+                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Contenido Total</div>
                   </CardContent>
                 </Card>
                 
-                <Card className="text-center">
+                <Card className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-trading-gold/20 hover:border-trading-gold/50 border-2 border-transparent">
                   <CardContent className="p-6">
-                    <Target className="w-8 h-8 text-trading-gold mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-trading-black">3</div>
-                    <div className="text-sm text-gray-600">Niveles</div>
+                    <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                      <Target className="w-8 h-8 text-trading-gold mx-auto mb-3" />
+                    </div>
+                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">3</div>
+                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Niveles</div>
                   </CardContent>
                 </Card>
                 
-                <Card className="text-center">
+                <Card className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-trading-gold/20 hover:border-trading-gold/50 border-2 border-transparent">
                   <CardContent className="p-6">
-                    <Users className="w-8 h-8 text-trading-gold mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-trading-black">∞</div>
-                    <div className="text-sm text-gray-600">Acceso Vitalicio</div>
+                    <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-rotate-6">
+                      <Users className="w-8 h-8 text-trading-gold mx-auto mb-3" />
+                    </div>
+                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">∞</div>
+                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Acceso Vitalicio</div>
                   </CardContent>
                 </Card>
               </div>

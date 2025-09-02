@@ -70,10 +70,6 @@ export default function InformacionContacto() {
     >
       {/* Métodos de contacto */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-trading-black">
-          Métodos de Contacto
-        </h2>
-        
         {metodosContacto.map((metodo, index) => (
           <Card key={metodo.titulo} className={`${metodo.color} hover:shadow-lg transition-all duration-300`}>
             <CardContent className="p-6">
@@ -121,17 +117,11 @@ export default function InformacionContacto() {
           <div className="space-y-2 text-gray-700">
             <p><strong>Lunes a Viernes:</strong> 09:00 - 15:00 UTC-4</p>
             <p><strong>Horario de sesiones:</strong> 09:00 - 12:00 UTC-4</p>
-            <p><strong>Fines de semana:</strong> Respuesta el siguiente día hábil</p>
-          </div>
-          
-          <div className="mt-4 p-3 bg-yellow-100 rounded-lg">
-            <p className="text-yellow-800 text-sm">
-              <strong>Respuesta rápida:</strong> Durante las sesiones del GTR respondemos 
-              consultas urgentes por WhatsApp cuando sea posible.
-            </p>
           </div>
         </CardContent>
       </Card>
+
+
 
       {/* Enlaces útiles */}
       <Card>
@@ -145,56 +135,31 @@ export default function InformacionContacto() {
           
           <div className="space-y-4">
             {enlacesUtiles.map((enlace, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-semibold text-trading-black text-sm">
-                    {enlace.titulo}
-                  </h4>
-                  <p className="text-gray-600 text-xs">
-                    {enlace.descripcion}
-                  </p>
+              <button
+                key={index}
+                onClick={() => window.open(enlace.enlace, '_blank')}
+                className="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:shadow-md hover:scale-[1.02] group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="font-semibold text-trading-black text-sm group-hover:text-trading-gold transition-colors duration-200">
+                      {enlace.titulo}
+                    </h4>
+                    <p className="text-gray-600 text-xs group-hover:text-gray-800 transition-colors duration-200">
+                      {enlace.descripcion}
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center group-hover:bg-trading-gold group-hover:text-white transition-all duration-200">
+                    <LazyIcon iconName="ExternalLink" className="w-3 h-3" size={12} />
+                  </div>
                 </div>
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  onClick={() => window.open(enlace.enlace, '_blank')}
-                >
-                  <LazyIcon iconName="ExternalLink" className="w-3 h-3" size={12} />
-                </Button>
-              </div>
+              </button>
             ))}
           </div>
         </CardContent>
       </Card>
 
-      {/* FAQ rápido */}
-      <Card className="bg-blue-50 border-blue-200">
-        <CardContent className="p-6">
-          <div className="flex items-center space-x-3 mb-4">
-            <LazyIcon iconName="HelpCircle" className="w-6 h-6 text-blue-600" size={24} />
-            <h3 className="text-lg font-bold text-trading-black">
-              Preguntas Frecuentes
-            </h3>
-          </div>
-          
-          <div className="space-y-3 text-sm">
-            <div>
-              <p className="font-semibold text-blue-800">¿Cuánto tarda el acceso al GTR?</p>
-              <p className="text-blue-700">Si los datos están correctos, en ≤ 24h recibes el acceso y AlphaCopilot.</p>
-            </div>
-            
-            <div>
-              <p className="font-semibold text-blue-800">¿AlphaCopilot funciona en otros brokers?</p>
-              <p className="text-blue-700">No. AlphaCopilot es exclusivo para cuentas HFM del GTR.</p>
-            </div>
-            
-            <div>
-              <p className="font-semibold text-blue-800">¿Hay mensualidades?</p>
-              <p className="text-blue-700">No. El acceso es vitalicio tras la validación exitosa.</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+
     </m.div>
   );
 }

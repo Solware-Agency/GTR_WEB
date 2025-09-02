@@ -45,8 +45,12 @@ export default function PieDePagina() {
             className="lg:col-span-1"
           >
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-trading-gold rounded-xl flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-trading-black" />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Favicon/android-chrome-192x192.png"
+                  alt="Danny Antonucci Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="text-xl font-bold">Danny Antonucci</span>
