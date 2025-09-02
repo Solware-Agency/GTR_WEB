@@ -1,0 +1,15 @@
+{
+  "/_not-found": "/_not-found",
+  "/page": "/",
+  "/contacto/page": "/contacto",
+  "/asesor-experto/page": "/asesor-experto",
+  "/sobre-danny/page": "/sobre-danny",
+  "/testimonios/page": "/testimonios",
+  "/cursos/page": "/cursos",
+  "/trading-room/page": "/trading-room",
+  "/trayectoria/page": "/trayectoria",
+  "/legal/terminos/page": "/legal/terminos",
+  "/legal/privacidad/page": "/legal/privacidad",
+  "/legal/aviso-legal/page": "/legal/aviso-legal",
+  "/cursos/[slug]/page": "/cursos/[slug]"
+}

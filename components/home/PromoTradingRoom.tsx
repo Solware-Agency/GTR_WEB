@@ -59,10 +59,6 @@ export default function PromoTradingRoom() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-block px-4 py-2 bg-trading-gold bg-opacity-20 text-trading-gold font-semibold rounded-full text-sm mb-4">
-              🚀 El corazón del GTR
-            </div>
-            
             <h2 className="text-3xl lg:text-5xl font-bold text-trading-black mb-6">
               Global Trading Room
             </h2>

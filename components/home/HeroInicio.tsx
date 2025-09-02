@@ -20,10 +20,6 @@ export default function HeroInicio() {
               className="text-center lg:text-left"
             >
               <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-trading-gold bg-opacity-20 text-trading-gold font-semibold rounded-full text-sm mb-4">
-                  🔥 Sesiones diarias desde 09:00 UTC-4
-                </span>
-                
                 <h1 className="text-4xl lg:text-6xl font-extra-bold text-trading-black mb-6 leading-tight">
                   Trading con{' '}
                   <span className="text-gradient-gold">Comunidad</span>,{' '}
