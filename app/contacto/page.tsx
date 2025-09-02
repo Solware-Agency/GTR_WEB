@@ -25,7 +25,37 @@ export default function ContactoPage() {
               </div>
 
               <div className="grid lg:grid-cols-2 gap-12">
-                <FormularioContacto />
+                <div className="space-y-8">
+                  <FormularioContacto />
+                  
+                  {/* FAQ debajo del formulario */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-6 h-6 text-blue-600">❓</div>
+                      <h3 className="text-lg font-bold text-trading-black">
+                        Preguntas Frecuentes
+                      </h3>
+                    </div>
+                    
+                    <div className="space-y-3 text-sm">
+                      <div>
+                        <p className="font-semibold text-blue-800">¿Cuánto tarda el acceso al GTR?</p>
+                        <p className="text-blue-700">Si los datos están correctos, en ≤ 24h recibes el acceso y AlphaCopilot.</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-semibold text-blue-800">¿AlphaCopilot funciona en otros brokers?</p>
+                        <p className="text-blue-700">No. AlphaCopilot es exclusivo para cuentas HFM del GTR.</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-semibold text-blue-800">¿Hay mensualidades?</p>
+                        <p className="text-blue-700">No. El acceso es vitalicio tras la validación exitosa.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
                 <InformacionContacto />
               </div>
             </div>

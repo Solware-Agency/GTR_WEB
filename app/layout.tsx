@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description: 'Trader profesional y mentor. Únete al Global Trading Room para operar con método, gestión 1-2% y comunidad diaria.',
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#D4AF37',
+  icons: {
+    icon: [
+      { url: 'https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Favicon/favicon.ico' },
+    ],
+  },
   // Optimizaciones de rendimiento
   robots: {
     index: true,

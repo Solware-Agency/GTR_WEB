@@ -46,8 +46,12 @@ export default function BarraNavegacion() {
         <div className="flex items-center justify-between h-16 lg:h-20 min-w-0">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group flex-shrink-0">
-            <div className="w-10 h-10 bg-trading-gold rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-              <TrendingUp className="w-6 h-6 text-trading-black" />
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 overflow-hidden">
+              <img 
+                src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Favicon/android-chrome-192x192.png"
+                alt="Danny Antonucci Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-trading-black">
