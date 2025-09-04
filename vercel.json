@@ -1,11 +1,6 @@
 {
   "version": 2,
-  "outputDirectory": "out",
-  "trailingSlash": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "trailingSlash": true
 }
