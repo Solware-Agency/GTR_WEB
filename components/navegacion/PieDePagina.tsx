@@ -155,8 +155,15 @@ export default function PieDePagina() {
               viewport={{ once: true }}
               className="text-gray-400 text-sm"
             >
-              © {new Date().getFullYear()} Danny Antonucci - Global Trading Room. 
-              Todos los derechos reservados.
+              Desarrollado por{' '}
+              <a
+                href="https://www.solware.agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-trading-gold hover:text-trading-gold-light transition-colors duration-200"
+              >
+                Solware
+              </a>
             </m.div>
 
             {/* Enlaces legales */}

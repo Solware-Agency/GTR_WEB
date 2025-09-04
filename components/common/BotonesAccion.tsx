@@ -4,6 +4,7 @@ import React from 'react';
 import { m } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { WHATSAPP_URL, EXTERNAL_LINKS } from '@/lib/constants';
 
 interface BotonesAccionProps {
   className?: string;
@@ -14,7 +15,7 @@ export default function BotonesAccion({ className }: BotonesAccionProps) {
     <div className={className}>
       <Button 
         className="btn-primary w-full mb-3"
-        onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+        onClick={() => window.open(WHATSAPP_URL, '_blank')}
       >
         Unirse al GTR
       </Button>
@@ -22,7 +23,7 @@ export default function BotonesAccion({ className }: BotonesAccionProps) {
       <Button 
         variant="outline" 
         className="w-full text-sm"
-        onClick={() => window.open('https://youtu.be/nBJ2p6dETgg', '_blank')}
+        onClick={() => window.open(EXTERNAL_LINKS.YOUTUBE_TUTORIAL, '_blank')}
       >
         Ver Tutorial HFM
       </Button>

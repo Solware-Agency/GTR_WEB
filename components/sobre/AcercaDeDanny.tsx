@@ -38,7 +38,7 @@ export default function AcercaDeDanny() {
                   <div className="text-center mb-6">
                     <div className="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden border-4 border-trading-gold">
                       <Image 
-                        src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Danny%20Fotos/2022-07-16_danny-antonucci__MG_1842_1.jpeg"
+                        src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Danny%20Fotos/dannyweb.webp"
                         alt="Danny Antonucci"
                         width={256}
                         height={256}

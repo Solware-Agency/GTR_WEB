@@ -155,7 +155,7 @@ export default function PromoTradingRoom() {
                   <div className="space-y-4">
                     <Button 
                       className="btn-primary w-full text-lg py-4"
-                      onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                      onClick={() => window.open('https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'), '_blank')}
                     >
                       Unirse al GTR
                       <ArrowRight className="w-5 h-5 ml-2" />
@@ -170,7 +170,7 @@ export default function PromoTradingRoom() {
 
                   <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
                     <p className="text-yellow-800 text-sm text-center">
-                      <strong>Requisito:</strong> Cuenta HFM con IB 30435151 y depósito mínimo USD 30 
+                      <strong>Requisito:</strong> Cuenta HFM y depósito mínimo USD 30 
                       (recomendado USD 50)
                     </p>
                   </div>

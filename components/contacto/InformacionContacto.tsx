@@ -16,7 +16,7 @@ const metodosContacto = [
     descripcion: 'Respuesta rápida para consultas urgentes',
     detalle: '+58 424 286 6986',
     accion: 'Escribir por WhatsApp',
-    enlace: 'https://wa.me/584242866986?text=¡Hola Danny! Me interesa conocer más sobre el Global Trading Room y cómo puedo unirme a las sesiones diarias de trading. ¿Podrías darme más información sobre el proceso de validación y acceso a AlphaCopilot?',
+    enlace: 'https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'),
     color: 'bg-green-50 border-green-200',
     iconColor: 'text-green-600'
   },
@@ -45,7 +45,7 @@ const metodosContacto = [
 const enlacesUtiles = [
   {
     titulo: 'Registro HFM',
-    descripcion: 'Abre tu cuenta con nuestro IB 30435151',
+    descripcion: 'Opera con nuestro broker aliado',
     enlace: 'https://register.hfm.com/int/es/new-live-account?refid=30435151'
   },
   {

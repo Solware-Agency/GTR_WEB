@@ -276,7 +276,7 @@ export default function TerminosPage() {
                     <p><strong>Email:</strong> soporte@globaltradingroom.com</p>
                     <p><strong>WhatsApp:</strong> +58 424 286 6986</p>
                     <p><strong>Formulario de validación:</strong> forms.globaltradingroom.com</p>
-                    <p><strong>Registro HFM:</strong> Con IB 30435151</p>
+                    <p><strong>Registro HFM:</strong> Con nuestro broker aliado</p>
                   </div>
                 </CardContent>
               </Card>

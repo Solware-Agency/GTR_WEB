@@ -1,12 +1,23 @@
 'use client';
 
-import React from 'react';
-import { m } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { m, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { TrendingUp, Users, Clock, Shield } from 'lucide-react';
 import ContadorProximaSesion from '@/components/contador/ContadorProximaSesion';
 
 export default function HeroInicio() {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ['Comunidad', 'Método', 'Criterio'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 4000); // Cambia cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-gradient-to-br from-trading-white to-gray-50">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,9 +33,30 @@ export default function HeroInicio() {
               <div className="mb-6">
                 <h1 className="text-4xl lg:text-6xl font-extra-bold text-trading-black mb-6 leading-tight">
                   Trading con{' '}
-                  <span className="text-gradient-gold">Comunidad</span>,{' '}
-                  <span className="text-gradient-gold">Método</span> y{' '}
-                  <span className="text-gradient-gold">Criterio</span>
+                  <AnimatePresence mode="wait">
+                    <m.span 
+                      key={currentWordIndex}
+                      initial={
+                        currentWordIndex === 0 
+                          ? { opacity: 0, y: -50, rotateX: -90 } // Comunidad desde arriba
+                          : currentWordIndex === 1 
+                          ? { opacity: 0, y: 50, rotateX: 90 } // Método desde abajo
+                          : { opacity: 0, x: -50, rotateY: -90 } // Criterio desde la izquierda
+                      }
+                      animate={{ opacity: 1, y: 0, x: 0, rotateX: 0, rotateY: 0 }}
+                      exit={
+                        currentWordIndex === 0 
+                          ? { opacity: 0, y: -50, rotateX: 90 }
+                          : currentWordIndex === 1 
+                          ? { opacity: 0, y: 50, rotateX: -90 }
+                          : { opacity: 0, x: 50, rotateY: 90 }
+                      }
+                      transition={{ duration: 0.7, ease: "easeInOut" }}
+                      className="text-gradient-gold inline-block"
+                    >
+                      {words[currentWordIndex]}
+                    </m.span>
+                  </AnimatePresence>
                 </h1>
                 
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -69,7 +101,7 @@ export default function HeroInicio() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button 
                   className="btn-primary text-lg px-8 py-4"
-                  onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                  onClick={() => window.open('https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'), '_blank')}
                 >
                   Unirse al GTR
                 </Button>

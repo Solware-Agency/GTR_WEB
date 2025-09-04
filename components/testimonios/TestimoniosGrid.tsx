@@ -154,7 +154,7 @@ export default function TestimoniosGrid() {
                 
                 <Button 
                   className="btn-primary text-lg px-8 py-4"
-                  onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                  onClick={() => window.open('https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'), '_blank')}
                 >
                   Unirse al GTR
                   <ArrowRight className="w-5 h-5 ml-2" />
