@@ -107,9 +107,6 @@ export default function ContadorProximaSesion() {
               {formatearFecha(proximaSesion)}
             </span>
           </div>
-          <p className="text-lg font-semibold text-trading-gold">
-            {formatearHora(proximaSesion)} (09:00 UTC-4)
-          </p>
         </div>
       )}
 

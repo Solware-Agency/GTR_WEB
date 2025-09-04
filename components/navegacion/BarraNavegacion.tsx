@@ -1,26 +1,31 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { m } from 'framer-motion';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, TrendingUp } from 'lucide-react';
+import { Menu, X, TrendingUp, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { WHATSAPP_URL } from '@/lib/constants';
 
 const menuItems = [
   { href: '/', label: 'Inicio' },
-  { href: '/sobre-danny', label: 'Sobre Danny' },
-  { href: '/trayectoria', label: 'Trayectoria' },
   { href: '/trading-room', label: 'Trading Room' },
   { href: '/cursos', label: 'Cursos' },
   { href: '/asesor-experto', label: 'Asesor Experto' },
-  { href: '/testimonios', label: 'Testimonios' },
   { href: '/contacto', label: 'Contacto' },
+];
+
+const sobreDannyItems = [
+  { href: '/trayectoria', label: 'Trayectoria' },
+  { href: '/testimonios', label: 'Testimonios' },
 ];
 
 export default function BarraNavegacion() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +68,54 @@ export default function BarraNavegacion() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-6">
-            {menuItems.map((item) => (
+            {/* Inicio */}
+            <Link
+              href="/"
+              className="text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+            >
+              Inicio
+            </Link>
+            
+                         {/* Sobre Danny Dropdown */}
+             <div 
+               className="relative" 
+               ref={dropdownRef}
+               onMouseEnter={() => setIsDropdownOpen(true)}
+               onMouseLeave={() => setIsDropdownOpen(false)}
+             >
+               <Link
+                 href="/sobre-danny"
+                 className="flex items-center space-x-1 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+               >
+                 <span>Sobre Danny</span>
+                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+               </Link>
+              
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <m.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-48 bg-trading-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
+                  >
+                    {sobreDannyItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 text-sm"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </m.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Resto de opciones del menú */}
+            {menuItems.slice(2).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -78,7 +130,7 @@ export default function BarraNavegacion() {
           <div className="hidden lg:block ml-4 flex-shrink-0">
             <Button 
               className="btn-primary text-sm px-4 py-2"
-              onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+              onClick={() => window.open(WHATSAPP_URL, '_blank')}
             >
               Unirse al GTR
             </Button>
@@ -103,21 +155,74 @@ export default function BarraNavegacion() {
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-trading-white border-t border-gray-200 mt-4"
             >
-              <div className="py-4 space-y-4">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 font-medium"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                             <div className="py-4 space-y-4">
+                 {/* Inicio */}
+                 <Link
+                   href="/"
+                   onClick={() => setIsOpen(false)}
+                   className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 font-medium"
+                 >
+                   Inicio
+                 </Link>
+                 
+                 {/* Sobre Danny section in mobile */}
+                 <div className="px-4">
+                   <div className="flex items-center justify-between">
+                     <Link
+                       href="/sobre-danny"
+                       onClick={() => setIsOpen(false)}
+                       className="flex-1 py-2 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium"
+                     >
+                       Sobre Danny
+                     </Link>
+                     <button
+                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                       className="p-2 text-trading-black hover:text-trading-gold transition-colors duration-200"
+                     >
+                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                     </button>
+                   </div>
+                   
+                   <AnimatePresence>
+                     {isDropdownOpen && (
+                       <m.div
+                         initial={{ opacity: 0, height: 0 }}
+                         animate={{ opacity: 1, height: 'auto' }}
+                         exit={{ opacity: 0, height: 0 }}
+                         transition={{ duration: 0.2 }}
+                         className="ml-4 mt-2 space-y-2"
+                       >
+                         {sobreDannyItems.map((item) => (
+                           <Link
+                             key={item.href}
+                             href={item.href}
+                             onClick={() => setIsOpen(false)}
+                             className="block py-2 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm"
+                           >
+                             {item.label}
+                           </Link>
+                         ))}
+                       </m.div>
+                     )}
+                   </AnimatePresence>
+                 </div>
+                 
+                 {/* Resto de opciones del menú */}
+                 {menuItems.slice(1).map((item) => (
+                   <Link
+                     key={item.href}
+                     href={item.href}
+                     onClick={() => setIsOpen(false)}
+                     className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 font-medium"
+                   >
+                     {item.label}
+                   </Link>
+                 ))}
+                
                 <div className="px-4 pt-4">
                   <Button 
                     className="btn-primary w-full"
-                    onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                    onClick={() => window.open(WHATSAPP_URL, '_blank')}
                   >
                     Unirse al GTR
                   </Button>

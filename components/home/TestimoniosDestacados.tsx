@@ -139,7 +139,7 @@ export default function TestimoniosDestacados() {
                 
                 <Button 
                   className="btn-primary"
-                  onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                  onClick={() => window.open('https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'), '_blank')}
                 >
                   Unirse al GTR
                 </Button>

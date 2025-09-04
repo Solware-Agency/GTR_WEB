@@ -57,7 +57,7 @@ const procesoPaso = [
   {
     numero: 1,
     titulo: 'Registro HFM',
-    descripcion: 'Abre tu cuenta en HFM con nuestro IB 30435151',
+    descripcion: 'Abre tu cuenta en HFM con nuestro broker aliado',
     enlace: 'https://register.hfm.com/int/es/new-live-account?refid=30435151'
   },
   {

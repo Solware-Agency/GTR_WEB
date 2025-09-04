@@ -147,7 +147,7 @@ export default function TradingRoomPage() {
                       </div>
                       <h4 className="font-bold text-trading-black mb-3 transition-colors duration-300 group-hover:text-blue-800">Registro HFM</h4>
                       <p className="text-gray-600 text-sm mb-4 transition-colors duration-300 group-hover:text-gray-700">
-                        Abre tu cuenta en HFM con nuestro IB 30435151 y realiza tu depósito inicial.
+                        Abre tu cuenta en HFM y realiza tu depósito inicial.
                       </p>
                       <BotonRegistroHFM />
                     </CardContent>
