@@ -38,7 +38,7 @@ export default function BotonesTradingRoom({ className }: BotonesTradingRoomProp
         className="text-lg px-8 py-4"
         onClick={() => window.open('https://youtu.be/nBJ2p6dETgg', '_blank')}
       >
-        Ver Tutorial HFM
+        Ver Demostración HFM
       </Button>
     </div>
   );

@@ -58,8 +58,8 @@ export default function BarraNavegacion() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold text-trading-black">
+            <div className="block">
+              <span className="text-sm sm:text-lg font-bold text-trading-black">
                 Danny Antonucci
               </span>
               <p className="text-xs text-gray-600 -mt-1">Global Trading Room</p>

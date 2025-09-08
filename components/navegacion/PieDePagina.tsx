@@ -138,7 +138,7 @@ export default function PieDePagina() {
               <p>
                 <strong className="text-trading-white">Horario de soporte:</strong><br />
                 Lunes a Viernes<br />
-                09:00 - 15:00 UTC-4
+                09:00 - 18:00 UTC-4
               </p>
             </div>
           </m.div>

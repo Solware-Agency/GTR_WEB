@@ -18,7 +18,7 @@ export default function BotonTutorial({ variant = "outline", size = "sm", classN
       className={className}
       onClick={() => window.open('https://youtu.be/nBJ2p6dETgg', '_blank')}
     >
-      Tutorial
+      Demostración
       <ExternalLink className="w-4 h-4 ml-2" />
     </Button>
   );
