@@ -1,12 +1,26 @@
 'use client';
 
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { m } from 'framer-motion';
 import { AnimatePresence } from 'framer-motion';
 import { WHATSAPP_URL } from '@/lib/constants';
 
 export default function BotonWhatsAppFijo() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isAutoOpen, setIsAutoOpen] = useState(false);
+
+  // Auto-abrir cada 5 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAutoOpen(true);
+      // Cerrar después de 2 segundos
+      setTimeout(() => {
+        setIsAutoOpen(false);
+      }, 2000);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const abrirWhatsApp = () => {
     window.open(WHATSAPP_URL, '_blank');
@@ -22,21 +36,21 @@ export default function BotonWhatsAppFijo() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Botón de Instagram que aparece en hover */}
+      {/* Botón de Instagram que aparece en hover o auto-abrir */}
       <AnimatePresence>
-        {isHovered && (
+        {(isHovered || isAutoOpen) && (
           <m.button
             initial={{ scale: 0, x: 20, opacity: 0 }}
             animate={{ scale: 1, x: 0, opacity: 1 }}
             exit={{ scale: 0, x: 20, opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={abrirInstagram}
-            className="w-16 h-16 bg-gradient-to-br from-[#E4405F] to-[#C13584] hover:from-[#C13584] hover:to-[#E4405F] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 group relative overflow-hidden"
+            className="w-12 h-12 bg-gradient-to-br from-[#E4405F] to-[#C13584] hover:from-[#C13584] hover:to-[#E4405F] text-white rounded-full shadow-xl flex items-center justify-center transition-all duration-300 group relative overflow-hidden"
             aria-label="Seguir en Instagram"
           >
             {/* Icono de Instagram SVG */}
             <svg 
-              className="w-8 h-8 group-hover:scale-110 transition-transform duration-200 z-10" 
+              className="w-6 h-6 group-hover:scale-110 transition-transform duration-200 z-10" 
               viewBox="0 0 24 24" 
               fill="currentColor"
             >
@@ -46,9 +60,9 @@ export default function BotonWhatsAppFijo() {
             {/* Efecto de brillo */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             
-            {/* Animación de pulso */}
-            <div className="absolute inset-0 rounded-full bg-[#E4405F] animate-ping opacity-30"></div>
-            <div className="absolute inset-0 rounded-full bg-[#E4405F] animate-pulse opacity-20"></div>
+            {/* Animación de pulso más intensa cuando se auto-abre */}
+            <div className={`absolute inset-0 rounded-full bg-[#E4405F] ${isAutoOpen ? 'animate-ping' : 'animate-pulse'} opacity-30`}></div>
+            <div className={`absolute inset-0 rounded-full bg-[#E4405F] ${isAutoOpen ? 'animate-pulse' : 'animate-ping'} opacity-20`}></div>
           </m.button>
         )}
       </AnimatePresence>
@@ -66,12 +80,12 @@ export default function BotonWhatsAppFijo() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={abrirWhatsApp}
-        className="w-16 h-16 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 group relative overflow-hidden"
+        className="w-12 h-12 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-xl flex items-center justify-center transition-all duration-300 group relative overflow-hidden"
         aria-label="Contactar por WhatsApp"
       >
         {/* Icono de WhatsApp SVG */}
         <svg 
-          className="w-8 h-8 group-hover:scale-110 transition-transform duration-200 z-10" 
+          className="w-6 h-6 group-hover:scale-110 transition-transform duration-200 z-10" 
           viewBox="0 0 24 24" 
           fill="currentColor"
         >
@@ -81,14 +95,14 @@ export default function BotonWhatsAppFijo() {
         {/* Efecto de brillo */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
-        {/* Animación de pulso */}
-        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30"></div>
-        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-pulse opacity-20"></div>
+        {/* Animación de pulso más intensa cuando se auto-abre */}
+        <div className={`absolute inset-0 rounded-full bg-[#25D366] ${isAutoOpen ? 'animate-ping' : 'animate-pulse'} opacity-30`}></div>
+        <div className={`absolute inset-0 rounded-full bg-[#25D366] ${isAutoOpen ? 'animate-pulse' : 'animate-ping'} opacity-20`}></div>
         
         {/* Tooltip */}
-        <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+        <div className="absolute right-full mr-2 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
           ¡Chatea con nosotros!
-          <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+          <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-2 border-l-gray-900 border-t-2 border-t-transparent border-b-2 border-b-transparent"></div>
         </div>
       </m.button>
     </div>

@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Send, CheckCircle } from 'lucide-react';
+import AnimacionMeteoritos from '@/components/common/AnimacionMeteoritos';
 
 const esquemaContacto = z.object({
   nombre: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
@@ -83,9 +84,14 @@ export default function FormularioContacto() {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
+      className="relative"
     >
-      <Card className="shadow-xl border border-gray-100">
-        <CardContent className="p-8">
+      <Card className="shadow-xl border border-gray-100 relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        {/* Fondo con animación de meteoritos */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 to-white/80 backdrop-blur-sm" />
+        <AnimacionMeteoritos />
+        
+        <CardContent className="p-8 relative z-10">
           <h2 className="text-2xl font-bold text-trading-black mb-6">
             Envíanos un Mensaje
           </h2>

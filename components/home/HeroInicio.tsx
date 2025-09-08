@@ -32,31 +32,35 @@ export default function HeroInicio() {
             >
               <div className="mb-6">
                 <h1 className="text-4xl lg:text-6xl font-extra-bold text-trading-black mb-6 leading-tight">
-                  Trading con{' '}
-                  <AnimatePresence mode="wait">
-                    <m.span 
-                      key={currentWordIndex}
-                      initial={
-                        currentWordIndex === 0 
-                          ? { opacity: 0, y: -50, rotateX: -90 } // Comunidad desde arriba
-                          : currentWordIndex === 1 
-                          ? { opacity: 0, y: 50, rotateX: 90 } // Método desde abajo
-                          : { opacity: 0, x: -50, rotateY: -90 } // Criterio desde la izquierda
-                      }
-                      animate={{ opacity: 1, y: 0, x: 0, rotateX: 0, rotateY: 0 }}
-                      exit={
-                        currentWordIndex === 0 
-                          ? { opacity: 0, y: -50, rotateX: 90 }
-                          : currentWordIndex === 1 
-                          ? { opacity: 0, y: 50, rotateX: -90 }
-                          : { opacity: 0, x: 50, rotateY: 90 }
-                      }
-                      transition={{ duration: 0.7, ease: "easeInOut" }}
-                      className="text-gradient-gold inline-block"
-                    >
-                      {words[currentWordIndex]}
-                    </m.span>
-                  </AnimatePresence>
+                  <div className="block">
+                    <div className="block">Trading con</div>
+                    <div className="inline-block min-h-[1.2em] min-w-[120px] sm:min-w-[140px] lg:min-w-[160px]">
+                      <AnimatePresence mode="wait">
+                        <m.span 
+                          key={currentWordIndex}
+                          initial={
+                            currentWordIndex === 0 
+                              ? { opacity: 0, y: -50, rotateX: -90 } // Comunidad desde arriba
+                              : currentWordIndex === 1 
+                              ? { opacity: 0, y: 50, rotateX: 90 } // Método desde abajo
+                              : { opacity: 0, x: -50, rotateY: -90 } // Criterio desde la izquierda
+                          }
+                          animate={{ opacity: 1, y: 0, x: 0, rotateX: 0, rotateY: 0 }}
+                          exit={
+                            currentWordIndex === 0 
+                              ? { opacity: 0, y: -50, rotateX: 90 }
+                              : currentWordIndex === 1 
+                              ? { opacity: 0, y: 50, rotateX: -90 }
+                              : { opacity: 0, x: 50, rotateY: 90 }
+                          }
+                          transition={{ duration: 0.7, ease: "easeInOut" }}
+                          className="text-gradient-gold inline-block"
+                        >
+                          {words[currentWordIndex]}
+                        </m.span>
+                      </AnimatePresence>
+                    </div>
+                  </div>
                 </h1>
                 
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -111,7 +115,7 @@ export default function HeroInicio() {
                   className="btn-outline text-lg px-8 py-4"
                   onClick={() => window.open('https://youtu.be/nBJ2p6dETgg', '_blank')}
                 >
-                  Ver Tutorial
+                  Ver Demostración
                 </Button>
               </div>
 

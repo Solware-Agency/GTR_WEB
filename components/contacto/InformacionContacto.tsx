@@ -119,7 +119,7 @@ export default function InformacionContacto() {
           </div>
           
           <div className="space-y-2 text-gray-700">
-            <p><strong>Lunes a Viernes:</strong> 09:00 - 15:00 UTC-4</p>
+            <p><strong>Lunes a Viernes:</strong> 09:00 - 18:00 UTC-4</p>
             <p><strong>Horario de sesiones:</strong> 09:00 - 12:00 UTC-4</p>
           </div>
         </CardContent>

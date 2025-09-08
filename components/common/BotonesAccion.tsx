@@ -25,7 +25,7 @@ export default function BotonesAccion({ className }: BotonesAccionProps) {
         className="w-full text-sm"
         onClick={() => window.open(EXTERNAL_LINKS.YOUTUBE_TUTORIAL, '_blank')}
       >
-        Ver Tutorial HFM
+        Ver Demostración HFM
       </Button>
     </div>
   );

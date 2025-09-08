@@ -12,48 +12,48 @@ const bloques = [
     titulo: 'Sobre Danny',
     descripcion: 'Conoce la historia, valores y filosofía del trader detrás del Global Trading Room.',
     href: '/sobre-danny',
-    color: 'bg-blue-50 border-blue-200',
-    iconColor: 'text-blue-600'
+    color: 'bg-gradient-to-br from-amber-50 to-yellow-50 border-amber-200',
+    iconColor: 'text-amber-600'
   },
   {
     icono: Baseline,
     titulo: 'Trayectoria',
     descripcion: 'El camino desde los inicios hasta crear la metodología y comunidad del GTR.',
     href: '/trayectoria',
-    color: 'bg-purple-50 border-purple-200',
-    iconColor: 'text-purple-600'
+    color: 'bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200',
+    iconColor: 'text-emerald-600'
   },
   {
     icono: Users,
     titulo: 'Trading Room',
     descripcion: 'Sesiones diarias desde 09:00 UTC-4. Método, gestión 1-2% y práctica en comunidad.',
     href: '/trading-room',
-    color: 'bg-green-50 border-green-200',
-    iconColor: 'text-green-600'
+    color: 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200',
+    iconColor: 'text-blue-600'
   },
   {
     icono: GraduationCap,
     titulo: 'Cursos',
     descripcion: 'Formación estructurada desde básico a intermedio. Más de 20 clases y casos prácticos.',
     href: '/cursos',
-    color: 'bg-orange-50 border-orange-200',
-    iconColor: 'text-orange-600'
+    color: 'bg-gradient-to-br from-violet-50 to-purple-50 border-violet-200',
+    iconColor: 'text-violet-600'
   },
   {
     icono: Bot,
     titulo: 'Asesor Experto',
     descripcion: 'AlphaCopilot: tu copiloto de trading con semáforo, sesgo y alertas inteligentes.',
     href: '/asesor-experto',
-    color: 'bg-indigo-50 border-indigo-200',
-    iconColor: 'text-indigo-600'
+    color: 'bg-gradient-to-br from-rose-50 to-pink-50 border-rose-200',
+    iconColor: 'text-rose-600'
   },
   {
     icono: MessageSquare,
     titulo: 'Testimonios',
     descripcion: 'Casos reales de miembros del GTR. Resultados sin promesas, con trabajo y disciplina.',
     href: '/testimonios',
-    color: 'bg-pink-50 border-pink-200',
-    iconColor: 'text-pink-600'
+    color: 'bg-gradient-to-br from-slate-50 to-gray-50 border-slate-200',
+    iconColor: 'text-slate-600'
   }
 ];
 
