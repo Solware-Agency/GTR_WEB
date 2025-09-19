@@ -45,7 +45,7 @@ export default function PieDePagina() {
             className="lg:col-span-1"
           >
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center overflow-hidden">
+              <div className="w-20 h-20 rounded-xl flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Favicon/android-chrome-192x192.png"
                   alt="Danny Antonucci Logo"
