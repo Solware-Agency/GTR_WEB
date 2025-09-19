@@ -123,18 +123,18 @@ export default function ContadorProximaSesion() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-trading-gold bg-opacity-10 rounded-2xl p-4 border border-trading-gold border-opacity-20"
+            className="bg-trading-gold bg-opacity-10 rounded-2xl p-4 border border-trading-gold border-opacity-20 hover:bg-trading-gold hover:bg-opacity-20 hover:shadow-lg hover:scale-105 hover:border-trading-gold hover:border-opacity-40 transition-all duration-300 cursor-pointer group"
           >
             <m.div
               key={item.valor}
               initial={{ scale: 1.2 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.2 }}
-              className="text-2xl lg:text-3xl font-bold text-trading-black mb-1"
+              className="text-2xl lg:text-3xl font-bold text-trading-black mb-1 group-hover:text-trading-gold transition-colors duration-300"
             >
               {item.valor.toString().padStart(2, '0')}
             </m.div>
-            <div className="text-xs lg:text-sm text-gray-600 font-medium">
+            <div className="text-xs lg:text-sm text-gray-600 font-medium group-hover:text-trading-black transition-colors duration-300">
               {item.etiqueta}
             </div>
           </m.div>
