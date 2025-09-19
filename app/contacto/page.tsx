@@ -5,7 +5,9 @@ import BotonWhatsAppFijo from '@/components/common/BotonWhatsAppFijo';
 import FormularioContacto from '@/components/contacto/FormularioContacto';
 import InformacionContacto from '@/components/contacto/InformacionContacto';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Clock, Bot, CheckCircle } from 'lucide-react';
+import { WHATSAPP_URL } from '@/lib/constants';
 
 export default function ContactoPage() {
   return (
@@ -92,10 +94,16 @@ export default function ContactoPage() {
                         </div>
                       </div>
                       
-                      <div className="mt-8 p-4 bg-trading-gold/10 rounded-xl border border-trading-gold/30">
-                        <p className="text-trading-black font-medium text-center text-sm">
-                          ¿Tienes otra pregunta? Escríbenos directamente por WhatsApp para una respuesta personalizada.
+                      <div className="mt-8 p-4 bg-trading-gold/10 rounded-xl border border-trading-gold/30 text-center">
+                        <p className="text-trading-black font-medium text-sm mb-4">
+                          ¿Tienes otra pregunta?
                         </p>
+                        <Button 
+                          className="btn-primary text-sm px-6 py-2"
+                          onClick={() => window.open(WHATSAPP_URL, '_blank')}
+                        >
+                          Escribir por WhatsApp
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
