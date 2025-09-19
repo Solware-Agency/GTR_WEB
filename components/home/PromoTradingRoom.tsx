@@ -152,7 +152,7 @@ export default function PromoTradingRoom() {
                     ))}
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     <Button 
                       className="btn-primary w-full text-lg py-4"
                       onClick={() => window.open('https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'), '_blank')}
