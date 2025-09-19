@@ -53,6 +53,9 @@ export default function HeroInicio() {
                               ? { opacity: 0, y: 50, rotateX: -90 }
                               : { opacity: 0, x: 50, rotateY: 90 }
                           }
+                          initial={{ opacity: 0, y: -50, rotateX: -90 }}
+                          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                          exit={{ opacity: 0, y: -50, rotateX: 90 }}
                           transition={{ duration: 0.7, ease: "easeInOut" }}
                           className="text-gradient-gold inline-block"
                         >
