@@ -25,24 +25,29 @@ export default function ContadorProximaSesion() {
     const calcularProximaSesion = (): Date => {
       const ahora = new Date();
       
-      // Convertir a UTC-4 (EDT/AST)
-      const utcMinus4 = new Date(ahora.getTime() - (4 * 60 * 60 * 1000));
-      
       // Crear fecha para hoy a las 09:00 UTC-4
-      const hoyUTC4 = new Date(utcMinus4);
-      hoyUTC4.setHours(9, 0, 0, 0);
+      // UTC-4 significa 4 horas detrás de UTC
+      const hoy = new Date();
+      const sesionHoy = new Date();
       
-      // Convertir de vuelta a hora local
-      const hoySesion = new Date(hoyUTC4.getTime() + (4 * 60 * 60 * 1000));
+      // Establecer 09:00 UTC-4 (que es 13:00 UTC)
+      sesionHoy.setUTCHours(13, 0, 0, 0); // 09:00 UTC-4 = 13:00 UTC
       
-      // Si ya pasó la sesión de hoy, calcular para mañana
-      if (ahora > hoySesion) {
-        const manana = new Date(hoySesion);
-        manana.setDate(manana.getDate() + 1);
-        return manana;
+      // Verificar si es fin de semana
+      const diaSemana = hoy.getDay(); // 0 = domingo, 6 = sábado
+      
+      // Si es fin de semana o ya pasó la sesión de hoy, buscar próximo día hábil
+      if (diaSemana === 0 || diaSemana === 6 || ahora > sesionHoy) {
+        let proximoDiaHabil = new Date(sesionHoy);
+        
+        do {
+          proximoDiaHabil.setDate(proximoDiaHabil.getDate() + 1);
+        } while (proximoDiaHabil.getDay() === 0 || proximoDiaHabil.getDay() === 6);
+        
+        return proximoDiaHabil;
       }
       
-      return hoySesion;
+      return sesionHoy;
     };
 
     const actualizarContador = () => {
