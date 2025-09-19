@@ -4,6 +4,8 @@ import PieDePagina from '@/components/navegacion/PieDePagina';
 import BotonWhatsAppFijo from '@/components/common/BotonWhatsAppFijo';
 import FormularioContacto from '@/components/contacto/FormularioContacto';
 import InformacionContacto from '@/components/contacto/InformacionContacto';
+import { Card, CardContent } from '@/components/ui/card';
+import { Clock, Bot, CheckCircle } from 'lucide-react';
 
 export default function ContactoPage() {
   return (
