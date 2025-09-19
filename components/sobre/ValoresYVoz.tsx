@@ -5,6 +5,7 @@ import { m } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Quote, ArrowRight } from 'lucide-react';
+import { WHATSAPP_URL } from '@/lib/constants';
 
 const diferenciales = [
   'Acompañamiento diario en la apertura de NY (en vivo)',
@@ -100,7 +101,7 @@ export default function ValoresYVoz() {
                   
                   <Button 
                     className="btn-primary text-lg px-8 py-4"
-                    onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
+                    onClick={() => window.open(WHATSAPP_URL, '_blank')}
                   >
                     Conocer el Global Trading Room
                     <ArrowRight className="w-5 h-5 ml-2" />
