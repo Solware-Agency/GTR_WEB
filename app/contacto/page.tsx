@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import BarraNavegacion from '@/components/navegacion/BarraNavegacion';
 import PieDePagina from '@/components/navegacion/PieDePagina';
