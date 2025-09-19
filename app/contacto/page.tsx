@@ -29,31 +29,74 @@ export default function ContactoPage() {
                   <FormularioContacto />
                   
                   {/* FAQ debajo del formulario */}
-                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-6 h-6 text-blue-600">❓</div>
-                      <h3 className="text-lg font-bold text-trading-black">
-                        Preguntas Frecuentes
-                      </h3>
-                    </div>
-                    
-                    <div className="space-y-3 text-sm">
-                      <div>
-                        <p className="font-semibold text-blue-800">¿Cuánto tarda el acceso al GTR?</p>
-                        <p className="text-blue-700">Si los datos están correctos, en ≤ 24h recibes el acceso y AlphaCopilot.</p>
+                  <Card className="bg-gradient-to-br from-trading-gold/5 to-trading-gold/10 border-trading-gold/30 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex items-center space-x-4 mb-8">
+                        <div className="w-12 h-12 bg-trading-gold/20 rounded-2xl flex items-center justify-center">
+                          <div className="text-2xl">💡</div>
+                        </div>
+                        <h3 className="text-2xl font-bold text-trading-black">
+                          Preguntas Frecuentes
+                        </h3>
                       </div>
                       
-                      <div>
-                        <p className="font-semibold text-blue-800">¿AlphaCopilot funciona en otros brokers?</p>
-                        <p className="text-blue-700">No. AlphaCopilot es exclusivo para cuentas HFM del GTR.</p>
+                      <div className="space-y-6">
+                        <div className="group">
+                          <div className="flex items-start space-x-4 p-4 bg-white/60 rounded-xl border border-trading-gold/20 hover:border-trading-gold/40 hover:shadow-md transition-all duration-300">
+                            <div className="w-8 h-8 bg-trading-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-trading-gold/30 transition-colors duration-300">
+                              <Clock className="w-4 h-4 text-trading-gold" />
+                            </div>
+                            <div>
+                              <p className="font-bold text-trading-black mb-2 group-hover:text-trading-gold transition-colors duration-300">
+                                ¿Cuánto tarda el acceso al GTR?
+                              </p>
+                              <p className="text-gray-700 leading-relaxed">
+                                Si los datos están correctos, en ≤ 24h recibes el acceso y AlphaCopilot por correo electrónico.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="group">
+                          <div className="flex items-start space-x-4 p-4 bg-white/60 rounded-xl border border-trading-gold/20 hover:border-trading-gold/40 hover:shadow-md transition-all duration-300">
+                            <div className="w-8 h-8 bg-trading-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-trading-gold/30 transition-colors duration-300">
+                              <Bot className="w-4 h-4 text-trading-gold" />
+                            </div>
+                            <div>
+                              <p className="font-bold text-trading-black mb-2 group-hover:text-trading-gold transition-colors duration-300">
+                                ¿AlphaCopilot funciona en otros brokers?
+                              </p>
+                              <p className="text-gray-700 leading-relaxed">
+                                No. AlphaCopilot es exclusivo para cuentas HFM del GTR y requiere validación previa.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="group">
+                          <div className="flex items-start space-x-4 p-4 bg-white/60 rounded-xl border border-trading-gold/20 hover:border-trading-gold/40 hover:shadow-md transition-all duration-300">
+                            <div className="w-8 h-8 bg-trading-gold/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-trading-gold/30 transition-colors duration-300">
+                              <CheckCircle className="w-4 h-4 text-trading-gold" />
+                            </div>
+                            <div>
+                              <p className="font-bold text-trading-black mb-2 group-hover:text-trading-gold transition-colors duration-300">
+                                ¿Hay mensualidades?
+                              </p>
+                              <p className="text-gray-700 leading-relaxed">
+                                No. El acceso es vitalicio tras la validación exitosa. Sin suscripciones ni pagos recurrentes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-semibold text-blue-800">¿Hay mensualidades?</p>
-                        <p className="text-blue-700">No. El acceso es vitalicio tras la validación exitosa.</p>
+                      <div className="mt-8 p-4 bg-trading-gold/10 rounded-xl border border-trading-gold/30">
+                        <p className="text-trading-black font-medium text-center text-sm">
+                          ¿Tienes otra pregunta? Escríbenos directamente por WhatsApp para una respuesta personalizada.
+                        </p>
                       </div>
-                    </div>
-                  </div>
+                    </CardContent>
+                  </Card>
                 </div>
                 
                 <InformacionContacto />
