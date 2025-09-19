@@ -1,4 +1,5 @@
-import { m } from 'framer-motion';
+'use client';
+
 'use client';
 
 import * as React from 'react';
