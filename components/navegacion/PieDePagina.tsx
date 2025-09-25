@@ -35,7 +35,7 @@ export default function PieDePagina() {
   return (
     <footer className="bg-trading-black text-trading-white">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
           {/* Logo y descripción */}
           <m.div
             initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ export default function PieDePagina() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Link href="/" className="flex items-center space-x-3 mb-4">
+            <Link href="/" className="flex items-center justify-center md:justify-start space-x-3 mb-4">
               <div className="w-20 h-20 rounded-xl flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://lafysstpyiejevhrlmzc.supabase.co/storage/v1/object/public/imagenes/GTR/Favicon/android-chrome-192x192.png"
@@ -71,7 +71,7 @@ export default function PieDePagina() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold mb-3">Enlaces Útiles</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 flex flex-col items-center md:items-start">
               {enlacesUtiles.map((enlace) => (
                 <li key={enlace.href}>
                   {enlace.externo ? (
@@ -107,7 +107,7 @@ export default function PieDePagina() {
             <h3 className="text-lg font-semibold mb-3">Contacto</h3>
             
             {/* Redes sociales */}
-            <div className="flex space-x-4 mb-4">
+            <div className="flex justify-center md:justify-start space-x-4 mb-4">
               <a
                 href="https://instagram.com/Dannyantonuccioficial"
                 target="_blank"
@@ -134,7 +134,7 @@ export default function PieDePagina() {
               </a>
             </div>
             
-            <div className="space-y-3 text-gray-400">
+            <div className="space-y-3 text-gray-400 text-center md:text-left">
               <p>
                 <strong className="text-trading-white">Horario de soporte:</strong><br />
                 Lunes a Viernes<br />
@@ -172,7 +172,7 @@ export default function PieDePagina() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex space-x-6"
+              className="flex flex-wrap justify-center md:justify-end space-x-6"
             >
               {enlacesLegales.map((enlace) => (
                 <Link

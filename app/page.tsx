@@ -5,7 +5,7 @@ import HeroInicio from '@/components/home/HeroInicio';
 import BloquesCTAs from '@/components/home/BloquesCTAs';
 import PromoTradingRoom from '@/components/home/PromoTradingRoom';
 import PromoAsesorExperto from '@/components/home/PromoAsesorExperto';
-import TestimoniosDestacados from '@/components/home/TestimoniosDestacados';
+import InfiniteMovingCardsDemo from '@/components/infinite-moving-cards-demo';
 import BarraNavegacion from '@/components/navegacion/BarraNavegacion';
 import PieDePagina from '@/components/navegacion/PieDePagina';
 import BotonWhatsAppFijo from '@/components/common/BotonWhatsAppFijo';
@@ -23,7 +23,7 @@ export default function HomePage() {
         <BloquesCTAs />
         <PromoTradingRoom />
         <PromoAsesorExperto />
-        <TestimoniosDestacados />
+        <InfiniteMovingCardsDemo />
         <AlertaEtica />
       </main>
       

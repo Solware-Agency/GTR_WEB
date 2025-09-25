@@ -4,6 +4,7 @@ import React, { Suspense } from 'react';
 import { m } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote, TrendingUp } from 'lucide-react';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 
 const testimoniosDestacados = [
   {
@@ -67,7 +68,7 @@ export default function TestimoniosCarrusel() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
               Casos Destacados
@@ -77,61 +78,16 @@ export default function TestimoniosCarrusel() {
             </p>
           </m.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimoniosDestacados.map((testimonio, index) => (
-              <Suspense key={testimonio.nombre} fallback={<LoadingCard />}>
-                <m.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <CardContent className="p-6">
-                      {/* Header */}
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-trading-gold rounded-full flex items-center justify-center">
-                          <span className="text-trading-black font-bold text-sm">
-                            {testimonio.avatar}
-                          </span>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-trading-black">
-                            {testimonio.nombre}
-                          </h3>
-                          <p className="text-sm text-gray-600">
-                            {testimonio.ubicacion} • {testimonio.tiempo}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Estrellas */}
-                      <div className="flex space-x-1 mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-
-                      {/* Testimonio */}
-                      <div className="relative mb-4">
-                        <Quote className="w-6 h-6 text-trading-gold opacity-50 absolute -top-2 -left-2" />
-                        <p className="text-gray-700 italic leading-relaxed pl-4">
-                          {testimonio.testimonio}
-                        </p>
-                      </div>
-
-                      {/* Resultado */}
-                      <div className="flex items-center space-x-2 p-3 bg-green-50 rounded-xl border border-green-200">
-                        <TrendingUp className="w-4 h-4 text-green-600" />
-                        <span className="text-green-800 font-medium text-sm">
-                          {testimonio.resultado}
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </m.div>
-              </Suspense>
-            ))}
+          <div className="h-[28rem] rounded-md flex flex-col antialiased bg-gray-50 items-center justify-center relative overflow-hidden">
+            <InfiniteMovingCards
+              items={testimoniosDestacados.map(testimonio => ({
+                quote: testimonio.testimonio,
+                name: testimonio.nombre,
+                title: `${testimonio.ubicacion} • ${testimonio.tiempo}`
+              }))}
+              direction="right"
+              speed="slow"
+            />
           </div>
         </div>
       </div>
