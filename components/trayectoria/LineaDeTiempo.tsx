@@ -28,7 +28,7 @@ const hitos = [
   {
     año: 'Enero 2024',
     titulo: 'Nace el Trading Room',
-    descripcion: 'Salgo de la academia y lanzo mi Trading Room propio. La idea fue simple: enseñar gratis y crear comunidad. El trading es solitario; las mañanas tienen otro sentido cuando estás con gente que comparte la pasión.',
+    descripcion: 'Después de años en la academia, sentí que era hora de crear algo propio. Quería enseñar sin restricciones y construir una verdadera comunidad. Recuerdo la primera sesión: solo éramos 5 personas, pero la energía era increíble. El trading ya no era solitario.',
     icono: Users,
     color: 'bg-purple-50 border-purple-200',
     iconColor: 'text-purple-600',
@@ -37,7 +37,7 @@ const hitos = [
   {
     año: 'Feb-Abr 2024',
     titulo: 'Intensivo y Área de Miembros',
-    descripcion: 'Intensivo 1:1 por un mes completo. La respuesta fue impresionante pero exigente. De esa experiencia nace el Área de Miembros con clases grabadas para que cada quien avance a su ritmo.',
+    descripcion: 'La demanda creció tanto que decidí hacer un intensivo personalizado. Fueron 30 días intensos, pero ver cómo la gente realmente aprendía me motivó aún más. De ahí surgió la idea del Área de Miembros: que nadie se quede atrás por falta de tiempo.',
     icono: Calendar,
     color: 'bg-orange-50 border-orange-200',
     iconColor: 'text-orange-600',

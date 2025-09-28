@@ -13,7 +13,7 @@ export default function BotonesCursos({ className }: BotonesCursosProps) {
   return (
     <div className={className}>
       <Button 
-        className="btn-primary text-lg px-8 py-4"
+        className="btn-primary w-full text-lg px-8 py-4"
         onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
       >
         Acceso Completo
