@@ -14,7 +14,7 @@ import PreloadRoutes from '@/components/common/PreloadRoutes';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-trading-white">
+    <div className="min-h-screen bg-trading-black">
       <BarraNavegacion />
       <PreloadRoutes />
       

@@ -80,20 +80,20 @@ const procesoPaso = [
 
 export default function AsesorExpertoPage() {
   return (
-    <div className="min-h-screen bg-trading-white">
+    <div className="min-h-screen bg-trading-black">
       <BarraNavegacion />
       
       <main>
-        <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-gradient-to-br from-trading-white to-gray-50">
+        <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-gradient-to-br from-trading-black to-trading-black-lighter">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               {/* Hero */}
               <div className="text-center mb-16">
-                <h1 className="text-4xl lg:text-5xl font-bold text-trading-black mb-6">
+                <h1 className="text-4xl lg:text-5xl font-bold text-trading-white mb-6">
                   AlphaCopilot
                 </h1>
                 
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
                   Tu copiloto de trading inteligente. No ejecuta por ti, 
                   pero te da la claridad que necesitas para tomar mejores decisiones.
                 </p>
@@ -150,7 +150,7 @@ export default function AsesorExpertoPage() {
 
                 {/* Funcionalidades */}
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-trading-black mb-6">
+                  <h2 className="text-2xl font-bold text-trading-white mb-6">
                     ¿Qué Hace AlphaCopilot?
                   </h2>
                   
@@ -165,10 +165,10 @@ export default function AsesorExpertoPage() {
                               <IconoComponente className="w-6 h-6 text-trading-gold" />
                             </div>
                             <div>
-                              <h4 className="text-lg font-semibold text-trading-black mb-2">
+                              <h4 className="text-lg font-semibold text-trading-white mb-2">
                                 {func.titulo}
                               </h4>
-                              <p className="text-gray-600 text-sm">
+                              <p className="text-trading-gray-light text-sm">
                                 {func.descripcion}
                               </p>
                             </div>
@@ -182,11 +182,11 @@ export default function AsesorExpertoPage() {
 
               {/* Limitaciones importantes */}
               <div className="mt-16">
-                <Card className="border-red-200 bg-red-50">
+                <Card className="border-red-500 bg-red-900 bg-opacity-20">
                   <CardContent className="p-8">
                     <div className="flex items-center space-x-3 mb-6">
                       <Shield className="w-8 h-8 text-red-600" />
-                      <h3 className="text-2xl font-bold text-red-800">
+                      <h3 className="text-2xl font-bold text-red-400">
                         Limitaciones Importantes
                       </h3>
                     </div>
@@ -195,13 +195,13 @@ export default function AsesorExpertoPage() {
                       {limitaciones.map((limitacion, index) => (
                         <div key={index} className="flex items-start space-x-3">
                           <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-red-700 text-sm">{limitacion}</span>
+                          <span className="text-red-300 text-sm">{limitacion}</span>
                         </div>
                       ))}
                     </div>
                     
-                    <div className="mt-6 p-4 bg-red-100 rounded-xl">
-                      <p className="text-red-800 font-semibold text-center">
+                    <div className="mt-6 p-4 bg-red-900 bg-opacity-30 rounded-xl">
+                      <p className="text-red-300 font-semibold text-center">
                         AlphaCopilot es un copiloto, no un piloto automático. 
                         Todas las decisiones de trading son tuyas.
                       </p>
@@ -212,7 +212,7 @@ export default function AsesorExpertoPage() {
 
               {/* Proceso de obtención */}
               <div className="mt-16">
-                <h3 className="text-2xl font-bold text-trading-black text-center mb-12">
+                <h3 className="text-2xl font-bold text-trading-white text-center mb-12">
                   Cómo Obtener AlphaCopilot
                 </h3>
                 
@@ -224,11 +224,11 @@ export default function AsesorExpertoPage() {
                           <span className="text-2xl font-bold text-trading-gold">{paso.numero}</span>
                         </div>
                         
-                        <h4 className="font-bold text-trading-black mb-3">
+                        <h4 className="font-bold text-trading-white mb-3">
                           {paso.titulo}
                         </h4>
                         
-                        <p className="text-gray-600 text-sm mb-4">
+                        <p className="text-trading-gray-light text-sm mb-4">
                           {paso.descripcion}
                         </p>
                         
@@ -246,12 +246,12 @@ export default function AsesorExpertoPage() {
 
               {/* CTA final */}
               <div className="mt-16 text-center">
-                <Card className="bg-trading-black text-trading-white">
+                <Card className="bg-trading-black-lighter border-trading-gold/20">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-4">
+                    <h3 className="text-2xl font-bold text-trading-white mb-4">
                       ¿Listo para Operar con AlphaCopilot?
                     </h3>
-                    <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                    <p className="text-trading-gray-light mb-6 max-w-2xl mx-auto">
                       Únete al Global Trading Room y obtén acceso inmediato a AlphaCopilot, 
                       el área de miembros y las sesiones diarias en vivo.
                     </p>

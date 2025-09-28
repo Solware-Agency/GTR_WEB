@@ -39,8 +39,8 @@ const cursosDisponibles = [
       'Plan de trading & checklist',
       'Simulación & backtesting básico'
     ],
-    color: 'bg-blue-50 border-blue-200',
-    iconColor: 'text-blue-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     slug: 'trading-intermedio',
@@ -62,8 +62,8 @@ const cursosDisponibles = [
       'Psicología aplicada',
       'Diario privado & métricas'
     ],
-    color: 'bg-green-50 border-green-200',
-    iconColor: 'text-green-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     slug: 'masterclasses',
@@ -85,18 +85,18 @@ const cursosDisponibles = [
 
 export default function CursosPage() {
   return (
-    <div className="min-h-screen bg-trading-white">
+    <div className="min-h-screen bg-trading-black">
       <BarraNavegacion />
       
       <main>
-        <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-trading-white">
+        <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-trading-black">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h1 className="text-4xl lg:text-5xl font-bold text-trading-black mb-6">
+                <h1 className="text-4xl lg:text-5xl font-bold text-trading-white mb-6">
                   Cursos de Trading
                 </h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
                   Formación estructurada desde básico hasta intermedio. 
                   Más de 20 clases y casos prácticos para que operes con criterio y método.
                 </p>
@@ -109,8 +109,8 @@ export default function CursosPage() {
                     <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <BookOpen className="w-8 h-8 text-trading-gold mx-auto mb-3" />
                     </div>
-                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">25+</div>
-                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Clases Grabadas</div>
+                    <div className="text-2xl font-bold text-trading-white transition-colors duration-300 group-hover:text-trading-gold">25+</div>
+                    <div className="text-sm text-trading-gray-light transition-colors duration-300 group-hover:text-trading-white">Clases Grabadas</div>
                   </CardContent>
                 </Card>
                 
@@ -119,8 +119,8 @@ export default function CursosPage() {
                     <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-rotate-3">
                       <Clock className="w-8 h-8 text-trading-gold mx-auto mb-3" />
                     </div>
-                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">15h+</div>
-                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Contenido Total</div>
+                    <div className="text-2xl font-bold text-trading-white transition-colors duration-300 group-hover:text-trading-gold">15h+</div>
+                    <div className="text-sm text-trading-gray-light transition-colors duration-300 group-hover:text-trading-white">Contenido Total</div>
                   </CardContent>
                 </Card>
                 
@@ -129,8 +129,8 @@ export default function CursosPage() {
                     <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                       <Target className="w-8 h-8 text-trading-gold mx-auto mb-3" />
                     </div>
-                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">3</div>
-                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Niveles</div>
+                    <div className="text-2xl font-bold text-trading-white transition-colors duration-300 group-hover:text-trading-gold">3</div>
+                    <div className="text-sm text-trading-gray-light transition-colors duration-300 group-hover:text-trading-white">Niveles</div>
                   </CardContent>
                 </Card>
                 
@@ -139,8 +139,8 @@ export default function CursosPage() {
                     <div className="transform transition-all duration-300 group-hover:scale-110 group-hover:-rotate-6">
                       <Users className="w-8 h-8 text-trading-gold mx-auto mb-3" />
                     </div>
-                    <div className="text-2xl font-bold text-trading-black transition-colors duration-300 group-hover:text-trading-gold">∞</div>
-                    <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-trading-black">Acceso Vitalicio</div>
+                    <div className="text-2xl font-bold text-trading-white transition-colors duration-300 group-hover:text-trading-gold">∞</div>
+                    <div className="text-sm text-trading-gray-light transition-colors duration-300 group-hover:text-trading-white">Acceso Vitalicio</div>
                   </CardContent>
                 </Card>
               </div>
@@ -155,10 +155,10 @@ export default function CursosPage() {
                           <div className="flex items-center space-x-3 mb-4">
                             <GraduationCap className={`w-8 h-8 ${curso.iconColor}`} />
                             <div>
-                              <h3 className="text-2xl font-bold text-trading-black">
+                              <h3 className="text-2xl font-bold text-trading-white">
                                 {curso.titulo}
                               </h3>
-                              <div className="flex items-center space-x-4 text-sm text-gray-600">
+                              <div className="flex items-center space-x-4 text-sm text-trading-gray-light">
                                 <span className="font-semibold">{curso.nivel}</span>
                                 <span>•</span>
                                 <span>{curso.duracion}</span>
@@ -166,7 +166,7 @@ export default function CursosPage() {
                             </div>
                           </div>
                           
-                          <p className="text-gray-700 leading-relaxed mb-6">
+                          <p className="text-trading-gray-light leading-relaxed mb-6">
                             {curso.descripcion}
                           </p>
                           
@@ -174,13 +174,13 @@ export default function CursosPage() {
                             {curso.modulos.slice(0, 6).map((modulo, i) => (
                               <div key={i} className="flex items-center space-x-2">
                                 <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                                <span className="text-sm text-gray-700">{modulo}</span>
+                                <span className="text-sm text-trading-gray-light">{modulo}</span>
                               </div>
                             ))}
                           </div>
                           
                           {curso.modulos.length > 6 && (
-                            <p className="text-sm text-gray-500 mt-4">
+                            <p className="text-sm text-trading-gray mt-4">
                               + {curso.modulos.length - 6} módulos adicionales
                             </p>
                           )}
@@ -204,12 +204,12 @@ export default function CursosPage() {
 
               {/* CTA final */}
               <div className="mt-16 text-center">
-                <Card className="bg-trading-black text-trading-white">
+                <Card className="bg-trading-black-lighter border-trading-gold/20">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-4">
+                    <h3 className="text-2xl font-bold text-trading-white mb-4">
                       ¿Listo para Empezar?
                     </h3>
-                    <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                    <p className="text-trading-gray-light mb-6 max-w-2xl mx-auto">
                       Accede a todo el contenido educativo del GTR: cursos, área de miembros, 
                       sesiones en vivo y AlphaCopilot. Sin mensualidades, acceso vitalicio.
                     </p>

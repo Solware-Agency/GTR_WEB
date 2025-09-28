@@ -14,6 +14,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    avatar?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -88,22 +89,40 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-2 border-zinc-200 bg-white px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-gray-800 transition-all duration-300 ease-in-out hover:border-[#D4AF37] hover:shadow-lg hover:shadow-[#D4AF37]/25 hover:bg-gradient-to-br hover:from-white hover:to-yellow-50 cursor-pointer"
+            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border-2 border-trading-gold/20 bg-trading-black-lighter px-8 py-6 md:w-[450px] transition-all duration-300 ease-in-out hover:border-trading-gold hover:shadow-lg hover:shadow-trading-gold/25 hover:bg-gradient-to-br hover:from-trading-black-lighter hover:to-trading-black cursor-pointer"
             key={item.name}
             style={{
               willChange: 'transform, border-color, box-shadow',
             }}
           >
             <blockquote className="relative">
-              <span className="relative text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
+              <span className="relative text-sm leading-[1.6] font-normal text-trading-gray-light">
                 {item.quote}
               </span>
-              <div className="relative mt-6 flex flex-row items-center">
+              <div className="relative mt-6 flex flex-row items-center gap-3">
+                {/* Avatar */}
+                <div className="flex-shrink-0">
+                  {item.avatar ? (
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className="w-10 h-10 rounded-full object-cover border-2 border-trading-gold/30"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-trading-gold flex items-center justify-center border-2 border-trading-gold/30">
+                      <span className="text-trading-black font-bold text-sm">
+                        {item.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Nombre y título */}
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
+                  <span className="text-sm leading-[1.6] font-semibold text-trading-white">
                     {item.name}
                   </span>
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
+                  <span className="text-xs leading-[1.6] font-normal text-trading-gray-light">
                     {item.title}
                   </span>
                 </span>

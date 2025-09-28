@@ -59,7 +59,7 @@ const testimoniosAdicionales = [
 
 export default function TestimoniosGrid() {
   return (
-    <section className="py-20 bg-trading-white">
+    <section className="py-20 bg-trading-black-lighter">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <m.div
@@ -69,10 +69,10 @@ export default function TestimoniosGrid() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-trading-white mb-6">
               Más Testimonios de la Comunidad
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
               Cada historia es única, pero todas comparten algo en común: 
               disciplina, método y el apoyo de una comunidad real.
             </p>
@@ -87,7 +87,7 @@ export default function TestimoniosGrid() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full hover:shadow-lg transition-all duration-300">
+                <Card className="h-full hover:shadow-lg transition-all duration-300 border border-trading-gold/20 bg-trading-black">
                   <CardContent className="p-6">
                     {/* Header */}
                     <div className="flex items-center space-x-3 mb-4">
@@ -97,10 +97,10 @@ export default function TestimoniosGrid() {
                         </span>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-trading-black text-sm">
+                        <h3 className="font-semibold text-trading-white text-sm">
                           {testimonio.nombre}
                         </h3>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-xs text-trading-gray-light">
                           {testimonio.ubicacion} • {testimonio.tiempo}
                         </p>
                       </div>
@@ -116,15 +116,15 @@ export default function TestimoniosGrid() {
                     {/* Testimonio */}
                     <div className="relative mb-4">
                       <Quote className="w-4 h-4 text-trading-gold opacity-50 absolute -top-1 -left-1" />
-                      <p className="text-gray-700 text-sm leading-relaxed pl-3">
+                      <p className="text-trading-gray-light text-sm leading-relaxed pl-3">
                         {testimonio.testimonio}
                       </p>
                     </div>
 
                     {/* Resultado */}
-                    <div className="flex items-center space-x-2 p-2 bg-green-50 rounded-lg border border-green-200">
-                      <TrendingUp className="w-3 h-3 text-green-600" />
-                      <span className="text-green-800 font-medium text-xs">
+                    <div className="flex items-center space-x-2 p-2 bg-green-900 bg-opacity-20 rounded-lg border border-green-500">
+                      <TrendingUp className="w-3 h-3 text-green-400" />
+                      <span className="text-green-300 font-medium text-xs">
                         {testimonio.resultado}
                       </span>
                     </div>
@@ -144,10 +144,10 @@ export default function TestimoniosGrid() {
           >
             <Card className="bg-trading-gold bg-opacity-10 border-trading-gold max-w-2xl mx-auto">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-trading-black mb-4">
+                <h3 className="text-2xl font-bold text-trading-white mb-4">
                   ¿Quieres Ser el Próximo Caso de Éxito?
                 </h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-trading-gray-light mb-6">
                   Únete a cientos de traders que ya operan con método, 
                   disciplina y el apoyo de una comunidad real.
                 </p>

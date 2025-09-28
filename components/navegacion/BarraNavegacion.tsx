@@ -43,7 +43,7 @@ export default function BarraNavegacion() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-trading-white/95 backdrop-blur-md shadow-lg' 
+          ? 'bg-trading-black/95 backdrop-blur-md shadow-lg border-b border-trading-gold/20' 
           : 'bg-transparent'
       }`}
     >
@@ -59,10 +59,10 @@ export default function BarraNavegacion() {
               />
             </div>
             <div className="block">
-              <span className="text-sm sm:text-lg font-bold text-trading-black">
+              <span className="text-sm sm:text-lg font-bold text-trading-white">
                 Danny Antonucci
               </span>
-              <p className="text-xs text-gray-600 -mt-1">Global Trading Room</p>
+              <p className="text-xs text-trading-gray-light -mt-1">Global Trading Room</p>
             </div>
           </Link>
 
@@ -71,7 +71,7 @@ export default function BarraNavegacion() {
             {/* Inicio */}
             <Link
               href="/"
-              className="text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+              className="text-trading-white hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
             >
               Inicio
             </Link>
@@ -85,7 +85,7 @@ export default function BarraNavegacion() {
              >
                <Link
                  href="/sobre-danny"
-                 className="flex items-center space-x-1 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+                 className="flex items-center space-x-1 text-trading-white hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
                >
                  <span>Sobre Danny</span>
                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -98,13 +98,13 @@ export default function BarraNavegacion() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-trading-white rounded-xl shadow-lg border border-gray-200 py-2 z-50"
+                    className="absolute top-full left-0 mt-2 w-48 bg-trading-black-lighter rounded-xl shadow-lg border border-trading-gold/20 py-2 z-50"
                   >
                     {sobreDannyItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 text-sm"
+                        className="block px-4 py-2 text-trading-white hover:text-trading-gold hover:bg-trading-black-light transition-colors duration-200 text-sm"
                       >
                         {item.label}
                       </Link>
@@ -119,7 +119,7 @@ export default function BarraNavegacion() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
+                className="text-trading-white hover:text-trading-gold transition-colors duration-200 font-medium text-sm whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -153,14 +153,14 @@ export default function BarraNavegacion() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-trading-white border-t border-gray-200 mt-4"
+              className="lg:hidden bg-trading-black-lighter border-t border-trading-gold/20 mt-4"
             >
                              <div className="py-4 space-y-4">
                  {/* Inicio */}
                  <Link
                    href="/"
                    onClick={() => setIsOpen(false)}
-                   className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 font-medium"
+                   className="block px-4 py-2 text-trading-white hover:text-trading-gold hover:bg-trading-black-light transition-colors duration-200 font-medium"
                  >
                    Inicio
                  </Link>
@@ -171,13 +171,13 @@ export default function BarraNavegacion() {
                      <Link
                        href="/sobre-danny"
                        onClick={() => setIsOpen(false)}
-                       className="flex-1 py-2 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium"
+                       className="flex-1 py-2 text-trading-white hover:text-trading-gold transition-colors duration-200 font-medium"
                      >
                        Sobre Danny
                      </Link>
                      <button
                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                       className="p-2 text-trading-black hover:text-trading-gold transition-colors duration-200"
+                       className="p-2 text-trading-white hover:text-trading-gold transition-colors duration-200"
                      >
                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
                      </button>
@@ -197,7 +197,7 @@ export default function BarraNavegacion() {
                              key={item.href}
                              href={item.href}
                              onClick={() => setIsOpen(false)}
-                             className="block py-2 text-trading-black hover:text-trading-gold transition-colors duration-200 font-medium text-sm"
+                             className="block py-2 text-trading-white hover:text-trading-gold transition-colors duration-200 font-medium text-sm"
                            >
                              {item.label}
                            </Link>
@@ -213,7 +213,7 @@ export default function BarraNavegacion() {
                      key={item.href}
                      href={item.href}
                      onClick={() => setIsOpen(false)}
-                     className="block px-4 py-2 text-trading-black hover:text-trading-gold hover:bg-gray-50 transition-colors duration-200 font-medium"
+                     className="block px-4 py-2 text-trading-white hover:text-trading-gold hover:bg-trading-black-light transition-colors duration-200 font-medium"
                    >
                      {item.label}
                    </Link>

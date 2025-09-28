@@ -56,7 +56,7 @@ export default function PromoAsesorExperto() {
               AlphaCopilot
             </h2>
             
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
               Tu copiloto de trading inteligente. No ejecuta por ti, 
               pero te da la claridad que necesitas para tomar mejores decisiones.
             </p>
@@ -142,7 +142,7 @@ export default function PromoAsesorExperto() {
                         <h4 className="text-lg font-semibold text-trading-white mb-2">
                           {item.titulo}
                         </h4>
-                        <p className="text-gray-300">
+                        <p className="text-trading-gray-light">
                           {item.descripcion}
                         </p>
                       </div>

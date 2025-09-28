@@ -7,7 +7,7 @@ import ValoresYVoz from '@/components/sobre/ValoresYVoz';
 
 export default function SobreDannyPage() {
   return (
-    <div className="min-h-screen bg-trading-white">
+    <div className="min-h-screen bg-trading-black">
       <BarraNavegacion />
       
       <main>

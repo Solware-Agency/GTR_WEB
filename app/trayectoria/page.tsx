@@ -7,7 +7,7 @@ import MetodologiaTradingRoom from '@/components/trayectoria/MetodologiaTradingR
 
 export default function TrayectoriaPage() {
   return (
-    <div className="min-h-screen bg-trading-white">
+    <div className="min-h-screen bg-trading-black">
       <BarraNavegacion />
       
       <main>

@@ -99,15 +99,15 @@ export default function ContadorProximaSesion() {
     <div className="text-center">
       <div className="flex items-center justify-center space-x-2 mb-4">
         <Clock className="w-6 h-6 text-trading-gold" />
-        <h2 className="text-2xl font-bold text-trading-black">
+        <h2 className="text-2xl font-bold text-trading-white">
           Próxima Sesión
         </h2>
       </div>
 
       {proximaSesion && (
         <div className="mb-6">
-          <div className="flex items-center justify-center space-x-2 text-gray-600 mb-2">
-            <Calendar className="w-4 h-4" />
+          <div className="flex items-center justify-center space-x-2 text-trading-gray-light mb-2">
+            <Calendar className="w-4 h-4 text-trading-gold" />
             <span className="text-sm font-medium">
               {formatearFecha(proximaSesion)}
             </span>
@@ -128,18 +128,18 @@ export default function ContadorProximaSesion() {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-trading-gold bg-opacity-10 rounded-2xl p-4 border border-trading-gold border-opacity-20 hover:bg-trading-gold hover:bg-opacity-20 hover:shadow-lg hover:scale-105 hover:border-trading-gold hover:border-opacity-40 transition-all duration-300 cursor-pointer group"
+            className="bg-trading-black-lighter rounded-2xl p-4 border border-trading-gold/20 hover:bg-trading-black hover:shadow-lg hover:scale-105 hover:border-trading-gold hover:shadow-trading-gold/20 transition-all duration-300 cursor-pointer group"
           >
             <m.div
               key={item.valor}
               initial={{ scale: 1.2 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.2 }}
-              className="text-2xl lg:text-3xl font-bold text-trading-black mb-1 group-hover:text-trading-gold transition-colors duration-300"
+              className="text-2xl lg:text-3xl font-bold text-trading-gold mb-1 group-hover:text-trading-white transition-colors duration-300"
             >
               {item.valor.toString().padStart(2, '0')}
             </m.div>
-            <div className="text-xs lg:text-sm text-gray-600 font-medium group-hover:text-trading-black transition-colors duration-300">
+            <div className="text-xs lg:text-sm text-trading-gray-light font-medium group-hover:text-trading-white transition-colors duration-300">
               {item.etiqueta}
             </div>
           </m.div>
@@ -147,10 +147,10 @@ export default function ContadorProximaSesion() {
       </div>
 
       {/* Estado de la sesión */}
-      <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
+      <div className="p-4 bg-trading-gold bg-opacity-10 border border-trading-gold/20 rounded-xl">
         <div className="flex items-center justify-center space-x-2">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-green-800 font-medium text-sm">
+          <div className="w-3 h-3 bg-trading-gold rounded-full animate-pulse"></div>
+          <span className="text-trading-white font-medium text-sm">
             {tiempoRestante.dias === 0 && tiempoRestante.horas < 2 
               ? '🔥 Sesión próxima - ¡Prepárate!'
               : '📈 Trading Room activo - Únete cuando quieras'
