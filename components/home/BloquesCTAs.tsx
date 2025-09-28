@@ -12,54 +12,54 @@ const bloques = [
     titulo: 'Sobre Danny',
     descripcion: 'Conoce la historia, valores y filosofía del trader detrás del Global Trading Room.',
     href: '/sobre-danny',
-    color: 'bg-gradient-to-br from-amber-50 to-yellow-50 border-amber-200',
-    iconColor: 'text-amber-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: Baseline,
     titulo: 'Trayectoria',
     descripcion: 'El camino desde los inicios hasta crear la metodología y comunidad del GTR.',
     href: '/trayectoria',
-    color: 'bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200',
-    iconColor: 'text-emerald-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: Users,
     titulo: 'Trading Room',
     descripcion: 'Sesiones diarias desde 09:00 UTC-4. Método, gestión 1-2% y práctica en comunidad.',
     href: '/trading-room',
-    color: 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200',
-    iconColor: 'text-blue-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: GraduationCap,
     titulo: 'Cursos',
     descripcion: 'Formación estructurada desde básico a intermedio. Más de 20 clases y casos prácticos.',
     href: '/cursos',
-    color: 'bg-gradient-to-br from-violet-50 to-purple-50 border-violet-200',
-    iconColor: 'text-violet-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: Bot,
     titulo: 'Asesor Experto',
     descripcion: 'AlphaCopilot: tu copiloto de trading con semáforo, sesgo y alertas inteligentes.',
     href: '/asesor-experto',
-    color: 'bg-gradient-to-br from-rose-50 to-pink-50 border-rose-200',
-    iconColor: 'text-rose-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: MessageSquare,
     titulo: 'Testimonios',
     descripcion: 'Casos reales de miembros del GTR. Resultados sin promesas, con trabajo y disciplina.',
     href: '/testimonios',
-    color: 'bg-gradient-to-br from-slate-50 to-gray-50 border-slate-200',
-    iconColor: 'text-slate-600'
+    color: 'bg-trading-black-lighter border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   }
 ];
 
 export default function BloquesCTAs() {
   return (
-    <section className="py-20 bg-trading-white">
+    <section className="py-20 bg-trading-black">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <m.div
           initial={{ opacity: 0, y: 30 }}
@@ -68,10 +68,10 @@ export default function BloquesCTAs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-trading-white mb-6">
             Todo lo que Necesitas Saber
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
             Explora cada aspecto del Global Trading Room: desde la metodología 
             hasta las herramientas, la comunidad y los resultados reales.
           </p>
@@ -93,15 +93,15 @@ export default function BloquesCTAs() {
                   <Card className={`${bloque.color} hover:shadow-xl transition-all duration-300 group cursor-pointer h-full`}>
                     <CardContent className="p-8">
                       <div className="flex items-center space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                        <div className="w-12 h-12 bg-trading-black rounded-xl flex items-center justify-center shadow-sm">
                           <IconoComponente className={`w-6 h-6 ${bloque.iconColor}`} />
                         </div>
-                        <h3 className="text-xl font-bold text-trading-black">
+                        <h3 className="text-xl font-bold text-trading-white">
                           {bloque.titulo}
                         </h3>
                       </div>
                       
-                      <p className="text-gray-700 leading-relaxed mb-6">
+                      <p className="text-trading-gray-light leading-relaxed mb-6">
                         {bloque.descripcion}
                       </p>
                       
@@ -128,10 +128,10 @@ export default function BloquesCTAs() {
           <Card className="bg-trading-gold bg-opacity-10 border-trading-gold max-w-2xl mx-auto">
             <CardContent className="p-8">
               <Phone className="w-12 h-12 text-trading-gold mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-trading-black mb-4">
+              <h3 className="text-2xl font-bold text-trading-white mb-4">
                 ¿Tienes Preguntas?
               </h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-trading-gray-light mb-6">
                 Contáctanos directamente para resolver cualquier duda sobre 
                 el GTR, AlphaCopilot o el proceso de validación.
               </p>

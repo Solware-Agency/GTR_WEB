@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function AcercaDeDanny() {
   return (
-    <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-trading-white">
+    <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-trading-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <m.div
@@ -17,10 +17,10 @@ export default function AcercaDeDanny() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-trading-black mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-trading-white mb-6">
               Sobre Danny Antonucci
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
               Trader profesional, mentor y fundador del Global Trading Room. 
               Una historia de perseverancia, aprendizaje y construcción de comunidad.
             </p>
@@ -33,7 +33,7 @@ export default function AcercaDeDanny() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="bg-trading-white shadow-xl border border-gray-100">
+              <Card className="bg-trading-black-lighter shadow-xl border border-trading-gold/20">
                 <CardContent className="p-6">
                   <div className="text-center mb-6">
                     <div className="w-48 h-48 rounded-full mx-auto mb-4 overflow-hidden border-4 border-trading-gold">
@@ -48,7 +48,7 @@ export default function AcercaDeDanny() {
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       />
                     </div>
-                    <h2 className="text-xl font-bold text-trading-black mb-2">
+                    <h2 className="text-xl font-bold text-trading-white mb-2">
                       Danny Antonucci
                     </h2>
                     <p className="text-trading-gold font-semibold text-sm">
@@ -59,22 +59,22 @@ export default function AcercaDeDanny() {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <MapPin className="w-4 h-4 text-trading-gold" />
-                      <span className="text-gray-700 text-sm">Santa Elena de Guairén, Venezuela → Brasil</span>
+                      <span className="text-trading-gray-light text-sm">Santa Elena de Guairén, Venezuela → Brasil</span>
                     </div>
                     
                     <div className="flex items-center space-x-3">
                       <TrendingUp className="w-4 h-4 text-trading-gold" />
-                      <span className="text-gray-700 text-sm">6+ años de experiencia en trading</span>
+                      <span className="text-trading-gray-light text-sm">6+ años de experiencia en trading</span>
                     </div>
                     
                     <div className="flex items-center space-x-3">
                       <Users className="w-4 h-4 text-trading-gold" />
-                      <span className="text-gray-700 text-sm">Fundador del Global Trading Room</span>
+                      <span className="text-trading-gray-light text-sm">Fundador del Global Trading Room</span>
                     </div>
                     
                     <div className="flex items-center space-x-3">
                       <Heart className="w-4 h-4 text-trading-gold" />
-                      <span className="text-gray-700 text-sm">Comunidad, método y gestión 1-2%</span>
+                      <span className="text-trading-gray-light text-sm">Comunidad, método y gestión 1-2%</span>
                     </div>
                   </div>
                 </CardContent>
@@ -89,10 +89,10 @@ export default function AcercaDeDanny() {
               className="space-y-6"
             >
               <div>
-                <h3 className="text-2xl font-bold text-trading-black mb-4">
+                <h3 className="text-2xl font-bold text-trading-white mb-4">
                   Mi Historia
                 </h3>
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-trading-gray-light leading-relaxed">
                   <p>
                     Nací en Santa Elena de Guairén, Venezuela, cerca de la frontera con Brasil. 
                     Mi abuelo me enseñó a ver la vida desde perspectivas diferentes y a sostenerme 
@@ -129,7 +129,7 @@ export default function AcercaDeDanny() {
             <Card className="bg-gradient-to-br from-trading-gold/10 via-trading-gold/5 to-trading-gold/10 border-trading-gold shadow-lg">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-trading-black mb-2">
+                  <h3 className="text-2xl font-bold text-trading-white mb-2">
                     Mi Misión
                   </h3>
                   <p className="text-trading-gold font-semibold text-sm uppercase tracking-wide">
@@ -137,7 +137,7 @@ export default function AcercaDeDanny() {
                   </p>
                 </div>
                 
-                <div className="space-y-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <div className="space-y-4 text-trading-gray-light leading-relaxed max-w-3xl mx-auto">
                   <p className="text-lg font-medium">
                     No más promesas vacías ni "get rich quick".
                   </p>
@@ -152,8 +152,8 @@ export default function AcercaDeDanny() {
                     es más fácil mantenerse en el camino correcto.
                   </p>
                   
-                  <div className="bg-white/60 rounded-xl p-4 border border-trading-gold/20">
-                    <p className="text-trading-black font-semibold italic">
+                  <div className="bg-trading-black-lighter/60 rounded-xl p-4 border border-trading-gold/20">
+                    <p className="text-trading-white font-semibold italic">
                       "Mi objetivo no es que seas rico mañana. Es que tengas las herramientas 
                       para construir tu libertad financiera paso a paso, sin atajos peligrosos."
                     </p>

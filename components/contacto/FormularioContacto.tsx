@@ -57,19 +57,19 @@ export default function FormularioContacto() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="bg-green-50 border-green-200">
+        <Card className="bg-green-900 bg-opacity-20 border-green-500">
           <CardContent className="p-8 text-center">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-green-800 mb-4">
+            <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-green-300 mb-4">
               ¡Mensaje Enviado!
             </h3>
-            <p className="text-green-700 mb-6">
+            <p className="text-green-200 mb-6">
               Gracias por contactarnos. Responderemos a tu consulta en menos de 24 horas.
             </p>
             <Button 
               onClick={() => setEnviado(false)}
               variant="outline"
-              className="border-green-500 text-green-700 hover:bg-green-500 hover:text-white"
+              className="border-trading-gold text-trading-gold hover:bg-trading-gold hover:text-trading-black"
             >
               Enviar Otro Mensaje
             </Button>
@@ -86,19 +86,19 @@ export default function FormularioContacto() {
       transition={{ duration: 0.6 }}
       className="relative"
     >
-      <Card className="shadow-xl border border-gray-100 relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+      <Card className="shadow-xl border border-trading-gold/20 relative overflow-hidden bg-gradient-to-br from-trading-black-lighter to-trading-black">
         {/* Fondo con animación de meteoritos */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 to-white/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-br from-trading-black-lighter/80 to-trading-black/80 backdrop-blur-sm" />
         <AnimacionMeteoritos />
         
         <CardContent className="p-8 relative z-10">
-          <h2 className="text-2xl font-bold text-trading-black mb-6">
+          <h2 className="text-2xl font-bold text-trading-white mb-6">
             Envíanos un Mensaje
           </h2>
           
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              <Label htmlFor="nombre" className="text-trading-black font-medium">
+              <Label htmlFor="nombre" className="text-trading-white font-medium">
                 Nombre Completo
               </Label>
               <Input
@@ -113,7 +113,7 @@ export default function FormularioContacto() {
             </div>
 
             <div>
-              <Label htmlFor="email" className="text-trading-black font-medium">
+              <Label htmlFor="email" className="text-trading-white font-medium">
                 Email
               </Label>
               <Input
@@ -129,7 +129,7 @@ export default function FormularioContacto() {
             </div>
 
             <div>
-              <Label htmlFor="asunto" className="text-trading-black font-medium">
+              <Label htmlFor="asunto" className="text-trading-white font-medium">
                 Asunto
               </Label>
               <Input
@@ -144,7 +144,7 @@ export default function FormularioContacto() {
             </div>
 
             <div>
-              <Label htmlFor="mensaje" className="text-trading-black font-medium">
+              <Label htmlFor="mensaje" className="text-trading-white font-medium">
                 Mensaje
               </Label>
               <Textarea

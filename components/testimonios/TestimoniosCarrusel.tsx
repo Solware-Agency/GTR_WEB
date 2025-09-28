@@ -13,7 +13,7 @@ const testimoniosDestacados = [
     tiempo: '8 meses en GTR',
     testimonio: 'Después de quemar 3 cuentas, encontré en el GTR la disciplina que me faltaba. La gestión 1-2% y las confluencias me dieron la estructura que necesitaba. Hoy opero con confianza y mi cuenta está estable por 6 meses consecutivos.',
     resultado: 'Cuenta estable por 6 meses',
-    avatar: 'MG',
+    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80',
     destacado: true
   },
   {
@@ -22,7 +22,7 @@ const testimoniosDestacados = [
     tiempo: '1 año en GTR',
     testimonio: 'AlphaCopilot cambió mi forma de ver las entradas. Ya no improviso; espero las 3 confluencias y el semáforo en verde. La comunidad te mantiene enfocado cuando las emociones aparecen. Logré mi primer retiro exitoso.',
     resultado: 'Primer retiro exitoso',
-    avatar: 'CM',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80',
     destacado: true
   },
   {
@@ -31,7 +31,7 @@ const testimoniosDestacados = [
     tiempo: '6 meses en GTR',
     testimonio: 'Las sesiones diarias son oro puro. Ver a Danny operar en vivo, explicando cada decisión, es la mejor escuela. Aprendí más en 6 meses que en 2 años operando solo. Ahora tengo consistencia mensual.',
     resultado: 'Consistencia mensual',
-    avatar: 'AR',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80',
     destacado: true
   }
 ];
@@ -67,12 +67,13 @@ export default function TestimoniosCarrusel() {
       viewport={{ once: true }}
       className="-mb-16"
     >
-      <div className="h-[24rem] rounded-md flex flex-col antialiased bg-trading-white items-center justify-center relative overflow-hidden">
+      <div className="h-[24rem] rounded-md flex flex-col antialiased bg-trading-black-lighter items-center justify-center relative overflow-hidden border border-trading-gold/20">
         <InfiniteMovingCards
           items={testimoniosDestacados.map(testimonio => ({
             quote: testimonio.testimonio,
             name: testimonio.nombre,
-            title: `${testimonio.ubicacion} • ${testimonio.tiempo}`
+            title: `${testimonio.ubicacion} • ${testimonio.tiempo}`,
+            avatar: testimonio.avatar
           }))}
           direction="right"
           speed="slow"

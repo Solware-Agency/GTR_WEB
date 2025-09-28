@@ -49,7 +49,7 @@ const beneficios = [
 
 export default function PromoTradingRoom() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-trading-white">
+    <section className="py-20 bg-gradient-to-br from-trading-black-lighter to-trading-black">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <m.div
@@ -59,11 +59,11 @@ export default function PromoTradingRoom() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-trading-black mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-trading-white mb-6">
               Global Trading Room
             </h2>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
               Únete a la comunidad de traders más activa de América. 
               Operamos juntos, aprendemos juntos, crecemos juntos.
             </p>
@@ -77,7 +77,7 @@ export default function PromoTradingRoom() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-trading-black mb-8">
+              <h3 className="text-2xl font-bold text-trading-white mb-8">
                 ¿Qué Hace Especial al GTR?
               </h3>
               
@@ -98,10 +98,10 @@ export default function PromoTradingRoom() {
                         <IconoComponente className="w-6 h-6 text-trading-gold" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-trading-black mb-2">
+                        <h4 className="text-lg font-semibold text-trading-white mb-2">
                           {item.titulo}
                         </h4>
-                        <p className="text-gray-600">
+                        <p className="text-trading-gray-light">
                           {item.descripcion}
                         </p>
                       </div>
@@ -113,9 +113,9 @@ export default function PromoTradingRoom() {
               <div className="mt-8 p-6 bg-trading-gold bg-opacity-10 rounded-2xl border border-trading-gold border-opacity-20">
                 <div className="flex items-center space-x-3 mb-3">
                   <Calendar className="w-5 h-5 text-trading-gold" />
-                  <span className="font-semibold text-trading-black">Horario de Sesiones</span>
+                  <span className="font-semibold text-trading-white">Horario de Sesiones</span>
                 </div>
-                <p className="text-gray-700 text-sm">
+                <p className="text-trading-gray-light text-sm">
                   <strong>Lunes a Viernes:</strong> 09:00 UTC-4 (30 min antes de apertura NY)<br />
                   <strong>Duración:</strong> 2-3 horas promedio<br />
                   <strong>Especial NFP:</strong> Entrada más temprana los primeros viernes del mes
@@ -130,9 +130,9 @@ export default function PromoTradingRoom() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-trading-white shadow-2xl border border-gray-100">
+              <Card className="bg-trading-black-lighter shadow-2xl border border-trading-gold/20">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-trading-black mb-6">
+                  <h3 className="text-2xl font-bold text-trading-white mb-6">
                     Lo que Incluye tu Acceso
                   </h3>
                   
@@ -147,7 +147,7 @@ export default function PromoTradingRoom() {
                         className="flex items-center space-x-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-700">{beneficio}</span>
+                        <span className="text-trading-gray-light">{beneficio}</span>
                       </m.div>
                     ))}
                   </div>
@@ -168,8 +168,8 @@ export default function PromoTradingRoom() {
                     </Link>
                   </div>
 
-                  <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-                    <p className="text-yellow-800 text-sm text-center">
+                  <div className="mt-6 p-4 bg-trading-gold bg-opacity-10 border border-trading-gold border-opacity-20 rounded-xl">
+                    <p className="text-trading-gold text-sm text-center">
                       <strong>Requisito:</strong> Cuenta HFM y depósito mínimo USD 30 
                       (recomendado USD 50)
                     </p>

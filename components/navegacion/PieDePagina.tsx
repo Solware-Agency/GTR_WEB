@@ -54,7 +54,7 @@ export default function PieDePagina() {
               </div>
               <div>
                 <span className="text-xl font-bold">Danny Antonucci</span>
-                <p className="text-sm text-gray-400 -mt-1">Global Trading Room</p>
+                <p className="text-sm text-trading-gray-light -mt-1">Global Trading Room</p>
               </div>
             </Link>
             
@@ -79,7 +79,7 @@ export default function PieDePagina() {
                       href={enlace.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-trading-gold transition-colors duration-200 flex items-center space-x-2"
+                      className="text-trading-gray-light hover:text-trading-gold transition-colors duration-200 flex items-center space-x-2"
                     >
                       <span>{enlace.label}</span>
                       <ExternalLink className="w-3 h-3" />
@@ -87,7 +87,7 @@ export default function PieDePagina() {
                   ) : (
                     <Link
                       href={enlace.href}
-                      className="text-gray-400 hover:text-trading-gold transition-colors duration-200"
+                      className="text-trading-gray-light hover:text-trading-gold transition-colors duration-200"
                     >
                       {enlace.label}
                     </Link>
@@ -134,7 +134,7 @@ export default function PieDePagina() {
               </a>
             </div>
             
-            <div className="space-y-3 text-gray-400 text-center md:text-left">
+            <div className="space-y-3 text-trading-gray-light text-center md:text-left">
               <p>
                 <strong className="text-trading-white">Horario de soporte:</strong><br />
                 Lunes a Viernes<br />
@@ -145,7 +145,7 @@ export default function PieDePagina() {
         </div>
 
         {/* Separador */}
-        <div className="border-t border-gray-800 mt-8 pt-6">
+        <div className="border-t border-trading-gray mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <m.div
@@ -153,7 +153,7 @@ export default function PieDePagina() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-gray-400 text-sm"
+              className="text-trading-gray-light text-sm"
             >
               Desarrollado por{' '}
               <a
@@ -178,7 +178,7 @@ export default function PieDePagina() {
                 <Link
                   key={enlace.href}
                   href={enlace.href}
-                  className="text-gray-400 hover:text-trading-gold transition-colors duration-200 text-sm"
+                  className="text-trading-gray-light hover:text-trading-gold transition-colors duration-200 text-sm"
                 >
                   {enlace.label}
                 </Link>

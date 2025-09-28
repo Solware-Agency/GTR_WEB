@@ -18,9 +18,13 @@ const config: Config = {
         'trading-black': '#000000',
         'trading-black-light': '#0B0B0B',
         'trading-black-lighter': '#111111',
+        'trading-black-dark': '#1a1a1a',
         'trading-gold': '#D4AF37',
         'trading-gold-light': '#C8A951',
+        'trading-gold-dark': '#B8941F',
         'trading-white': '#FFFFFF',
+        'trading-gray': '#666666',
+        'trading-gray-light': '#999999',
         
         // Mantener colores base de shadcn/ui
         background: 'hsl(var(--background))',

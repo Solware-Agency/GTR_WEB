@@ -7,7 +7,7 @@ import { AlertTriangle, Shield } from 'lucide-react';
 
 export default function AlertaEtica() {
   return (
-    <section className="py-16 bg-yellow-50">
+    <section className="py-16 bg-trading-black-lighter">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <m.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,20 +16,20 @@ export default function AlertaEtica() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <Card className="border-yellow-200 bg-yellow-50">
+          <Card className="border-trading-gold/20 bg-trading-black">
             <CardContent className="p-8">
               <div className="flex items-start space-x-4">
                 <div className="flex items-center space-x-2 mb-4">
-                  <AlertTriangle className="w-8 h-8 text-yellow-600 flex-shrink-0" />
-                  <Shield className="w-8 h-8 text-yellow-600 flex-shrink-0" />
+                  <AlertTriangle className="w-8 h-8 text-trading-gold flex-shrink-0" />
+                  <Shield className="w-8 h-8 text-trading-gold flex-shrink-0" />
                 </div>
                 
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-yellow-800 mb-4">
+                  <h2 className="text-2xl font-bold text-trading-white mb-4">
                     Compromiso Ético y Transparencia
                   </h2>
                   
-                  <div className="space-y-4 text-yellow-800">
+                  <div className="space-y-4 text-trading-gray-light">
                     <p className="leading-relaxed">
                       <strong>Contenido educativo:</strong> Todos los testimonios son casos reales de miembros del GTR. 
                       Sin embargo, los resultados mostrados son específicos de cada persona y no representan 
@@ -55,8 +55,8 @@ export default function AlertaEtica() {
                     </p>
                   </div>
                   
-                  <div className="mt-6 p-4 bg-yellow-100 rounded-xl border border-yellow-300">
-                    <p className="text-yellow-800 font-medium text-center text-sm">
+                  <div className="mt-6 p-4 bg-trading-gold bg-opacity-10 rounded-xl border border-trading-gold/20">
+                    <p className="text-trading-white font-medium text-center text-sm">
                       <strong>Nuestro compromiso:</strong> Transparencia total, expectativas realistas 
                       y acompañamiento genuino en tu proceso de aprendizaje.
                     </p>

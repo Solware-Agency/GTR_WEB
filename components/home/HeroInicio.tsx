@@ -19,7 +19,7 @@ export default function HeroInicio() {
   }, []);
 
   return (
-    <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-gradient-to-br from-trading-white to-gray-50">
+    <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-gradient-to-br from-trading-black to-trading-black-lighter">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -31,7 +31,7 @@ export default function HeroInicio() {
               className="text-center lg:text-left"
             >
               <div className="mb-6">
-                <h1 className="text-4xl lg:text-6xl font-extra-bold text-trading-black mb-6 leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-extra-bold text-trading-white mb-6 leading-tight">
                   <div className="block">
                     <div className="block">Trading con</div>
                     <div className="inline-block min-h-[1.2em] min-w-[120px] sm:min-w-[140px] lg:min-w-[160px]">
@@ -63,7 +63,7 @@ export default function HeroInicio() {
                   </div>
                 </h1>
                 
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                <p className="text-xl text-trading-gray-light mb-8 leading-relaxed">
                   Únete al <strong>Global Trading Room</strong> y opera la apertura de Nueva York 
                   con gestión 1-2%, confluencias claras y el acompañamiento de AlphaCopilot. 
                   Sin promesas vacías, con método real.
@@ -76,28 +76,28 @@ export default function HeroInicio() {
                   <div className="w-10 h-10 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
                     <Users className="w-5 h-5 text-trading-gold" />
                   </div>
-                  <span className="text-gray-700 font-medium">Comunidad activa</span>
+                  <span className="text-trading-gray-light font-medium">Comunidad activa</span>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-trading-gold" />
                   </div>
-                  <span className="text-gray-700 font-medium">Gestión 1-2%</span>
+                  <span className="text-trading-gray-light font-medium">Gestión 1-2%</span>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
                     <Clock className="w-5 h-5 text-trading-gold" />
                   </div>
-                  <span className="text-gray-700 font-medium">Sesiones diarias</span>
+                  <span className="text-trading-gray-light font-medium">Sesiones diarias</span>
                 </div>
                 
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
                     <Shield className="w-5 h-5 text-trading-gold" />
                   </div>
-                  <span className="text-gray-700 font-medium">AlphaCopilot EA</span>
+                  <span className="text-trading-gray-light font-medium">AlphaCopilot EA</span>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ export default function HeroInicio() {
               </div>
 
               {/* Nota de transparencia */}
-              <p className="text-sm text-gray-500 italic">
+              <p className="text-sm text-trading-gray italic">
                 * Contenido educativo. Sin garantías de resultados. 
                 Opera solo con dinero que puedas permitirte perder.
               </p>
@@ -133,15 +133,15 @@ export default function HeroInicio() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-trading-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+              <div className="bg-trading-black-lighter rounded-3xl shadow-2xl p-8 border border-trading-gold/20">
                 <ContadorProximaSesion />
                 
-                <div className="mt-8 pt-8 border-t border-gray-100">
-                  <h3 className="text-xl font-bold text-trading-black mb-4">
+                <div className="mt-8 pt-8 border-t border-trading-gold/20">
+                  <h3 className="text-xl font-bold text-trading-white mb-4">
                     Próxima Sesión
                   </h3>
                   
-                  <div className="space-y-3 text-gray-700">
+                  <div className="space-y-3 text-trading-gray-light">
                     <div className="flex items-center justify-between">
                       <span>Horario:</span>
                       <span className="font-semibold">09:00 UTC-4</span>
@@ -159,7 +159,7 @@ export default function HeroInicio() {
                   </div>
                   
                   <div className="mt-6 p-4 bg-trading-gold bg-opacity-10 rounded-xl">
-                    <p className="text-sm text-trading-black font-medium text-center">
+                    <p className="text-sm text-trading-white font-medium text-center">
                       🎯 Método + Gestión + Comunidad = Resultados Sostenibles
                     </p>
                   </div>

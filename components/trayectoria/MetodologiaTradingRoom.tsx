@@ -49,7 +49,7 @@ const playbooks = [
 
 export default function MetodologiaTradingRoom() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-trading-black-lighter">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <m.div
@@ -59,10 +59,10 @@ export default function MetodologiaTradingRoom() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-trading-white mb-6">
               Metodología del Trading Room
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
               Los principios y reglas que aplicamos en cada sesión para operar 
               con criterio, disciplina y gestión de riesgo adecuada.
             </p>
@@ -87,21 +87,21 @@ export default function MetodologiaTradingRoom() {
                         <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
                           <IconoComponente className="w-6 h-6 text-trading-gold" />
                         </div>
-                        <h3 className="text-lg font-bold text-trading-black">
+                        <h3 className="text-lg font-bold text-trading-white">
                           {principio.titulo}
                         </h3>
                       </div>
                       
-                      <p className="text-gray-700 leading-relaxed mb-4">
+                      <p className="text-trading-gray-light leading-relaxed mb-4">
                         {principio.descripcion}
                       </p>
                       
                       <div className="space-y-2">
-                        <h4 className="font-semibold text-trading-black text-sm">Ejemplos:</h4>
+                        <h4 className="font-semibold text-trading-white text-sm">Ejemplos:</h4>
                         {principio.ejemplos.map((ejemplo, i) => (
                           <div key={i} className="flex items-start space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-sm text-gray-600">{ejemplo}</span>
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                            <span className="text-sm text-trading-gray-light">{ejemplo}</span>
                           </div>
                         ))}
                       </div>
@@ -120,7 +120,7 @@ export default function MetodologiaTradingRoom() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-2xl font-bold text-trading-black text-center mb-12">
+            <h3 className="text-2xl font-bold text-trading-white text-center mb-12">
               Playbooks Principales
             </h3>
             
@@ -133,12 +133,12 @@ export default function MetodologiaTradingRoom() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-trading-white border border-gray-200">
+                  <Card className="bg-trading-black border border-trading-gold/20">
                     <CardContent className="p-6">
-                      <h4 className="text-lg font-bold text-trading-black mb-3">
+                      <h4 className="text-lg font-bold text-trading-white mb-3">
                         {index + 1}. {playbook.nombre}
                       </h4>
-                      <p className="text-gray-700 leading-relaxed font-mono text-sm bg-gray-50 p-4 rounded-xl">
+                      <p className="text-trading-gray-light leading-relaxed font-mono text-sm bg-trading-black-lighter p-4 rounded-xl">
                         {playbook.descripcion}
                       </p>
                     </CardContent>

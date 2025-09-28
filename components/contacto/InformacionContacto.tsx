@@ -17,8 +17,8 @@ const metodosContacto = [
     detalle: '+58 424 286 6986',
     accion: 'Escribir por WhatsApp',
     enlace: 'https://wa.me/584242866986?text=' + encodeURIComponent('¡Hola Danny! Me interesa unirme al Global Trading Room. ¿Cómo puedo acceder?'),
-    color: 'bg-green-50 border-green-200',
-    iconColor: 'text-green-600'
+    color: 'bg-trading-black border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: 'Mail',
@@ -27,8 +27,8 @@ const metodosContacto = [
     detalle: 'soporte@globaltradingroom.com',
     accion: 'Enviar Email',
     enlace: 'mailto:soporte@globaltradingroom.com',
-    color: 'bg-blue-50 border-blue-200',
-    iconColor: 'text-blue-600'
+    color: 'bg-trading-black border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   },
   {
     icono: 'Instagram',
@@ -37,8 +37,8 @@ const metodosContacto = [
     detalle: '@Dannyantonuccioficial',
     accion: 'Seguir en Instagram',
     enlace: 'https://instagram.com/Dannyantonuccioficial',
-    color: 'bg-pink-50 border-pink-200',
-    iconColor: 'text-pink-600'
+    color: 'bg-trading-black border-trading-gold/20',
+    iconColor: 'text-trading-gold'
   }
 ];
 
@@ -69,7 +69,7 @@ export default function InformacionContacto() {
       className="space-y-8"
     >
       {/* Métodos de contacto - Tarjeta unificada */}
-      <Card className="bg-white border-gray-200 hover:shadow-lg transition-all duration-300">
+      <Card className="bg-trading-black-lighter border-trading-gold/20 hover:shadow-lg transition-all duration-300">
         <CardContent className="p-6">
           <div className="space-y-4">
             {metodosContacto.map((metodo, index) => (
@@ -81,10 +81,10 @@ export default function InformacionContacto() {
                   className={`block p-4 rounded-xl ${metodo.color} hover:shadow-md transition-all duration-300`}
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
+                    <div className="w-12 h-12 bg-trading-black-lighter rounded-xl flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-300">
                       {metodo.icono === 'Phone' ? (
                         <svg 
-                          className="w-6 h-6 text-green-600" 
+                          className="w-6 h-6 text-trading-gold" 
                           viewBox="0 0 24 24" 
                           fill="currentColor"
                         >
@@ -104,7 +104,7 @@ export default function InformacionContacto() {
                         href={metodo.enlace}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-semibold text-trading-black hover:text-trading-gold transition-colors duration-200 cursor-pointer block text-lg"
+                        className="font-semibold text-trading-white hover:text-trading-gold transition-colors duration-200 cursor-pointer block text-lg"
                       >
                         {metodo.detalle}
                       </a>
@@ -116,24 +116,24 @@ export default function InformacionContacto() {
           </div>
           
           {/* Horarios de atención dentro de la misma tarjeta */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          <div className="mt-6 pt-6 border-t border-trading-gold/20">
             <div className="flex items-center space-x-3 mb-4">
               <LazyIcon iconName="Clock" className="w-5 h-5 text-trading-gold" size={20} />
-              <h3 className="text-lg font-bold text-trading-black">
+              <h3 className="text-lg font-bold text-trading-white">
                 Horarios de Soporte
               </h3>
             </div>
             
-            <div className="space-y-2 text-gray-700">
+            <div className="space-y-2 text-trading-gray-light">
               <p><strong>Lunes a Viernes:</strong> 09:00 - 18:00 UTC-4</p>
             </div>
           </div>
           
           {/* Enlaces útiles dentro de la misma tarjeta */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          <div className="mt-6 pt-6 border-t border-trading-gold/20">
             <div className="flex items-center space-x-3 mb-4">
               <LazyIcon iconName="FileText" className="w-5 h-5 text-trading-gold" size={20} />
-              <h3 className="text-lg font-bold text-trading-black">
+              <h3 className="text-lg font-bold text-trading-white">
                 Enlaces Útiles
               </h3>
             </div>
@@ -143,15 +143,15 @@ export default function InformacionContacto() {
                 <button
                   key={index}
                   onClick={() => window.open(enlace.enlace, '_blank')}
-                  className="w-full text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:shadow-md hover:scale-[1.02] group"
+                  className="w-full text-left p-3 bg-trading-black hover:bg-trading-black-lighter rounded-lg transition-all duration-200 hover:shadow-md hover:scale-[1.02] group"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h4 className="font-semibold text-trading-black text-sm group-hover:text-trading-gold transition-colors duration-200">
+                      <h4 className="font-semibold text-trading-white text-sm group-hover:text-trading-gold transition-colors duration-200">
                         {enlace.titulo}
                       </h4>
                     </div>
-                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center group-hover:bg-trading-gold group-hover:text-white transition-all duration-200">
+                    <div className="w-8 h-8 bg-trading-black-lighter rounded-lg flex items-center justify-center group-hover:bg-trading-gold group-hover:text-trading-black transition-all duration-200">
                       <LazyIcon iconName="ExternalLink" className="w-3 h-3" size={12} />
                     </div>
                   </div>

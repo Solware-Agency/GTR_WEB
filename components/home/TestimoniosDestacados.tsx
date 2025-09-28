@@ -36,7 +36,7 @@ const testimoniosDestacados = [
 
 export default function TestimoniosDestacados() {
   return (
-    <section className="py-20 bg-gradient-to-br from-trading-white to-gray-50">
+    <section className="py-20 bg-gradient-to-br from-trading-black-lighter to-trading-black">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <m.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,11 +45,11 @@ export default function TestimoniosDestacados() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-trading-white mb-6">
             Lo que Dicen Nuestros Miembros
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-trading-gray-light max-w-3xl mx-auto">
             Testimonios reales de traders que encontraron en el GTR 
             la estructura y comunidad que necesitaban para crecer.
           </p>
@@ -64,7 +64,7 @@ export default function TestimoniosDestacados() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <Card className="h-full hover:shadow-xl transition-all duration-300 border border-trading-gold/20 bg-trading-black-lighter">
                 <CardContent className="p-6">
                   {/* Header */}
                   <div className="flex items-center space-x-4 mb-4">
@@ -74,10 +74,10 @@ export default function TestimoniosDestacados() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-trading-black">
+                      <h3 className="font-semibold text-trading-white">
                         {testimonio.nombre}
                       </h3>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-trading-gray-light">
                         {testimonio.ubicacion} • {testimonio.tiempo}
                       </p>
                     </div>
@@ -93,15 +93,15 @@ export default function TestimoniosDestacados() {
                   {/* Testimonio */}
                   <div className="relative mb-4">
                     <Quote className="w-6 h-6 text-trading-gold opacity-50 absolute -top-2 -left-2" />
-                    <p className="text-gray-700 italic leading-relaxed pl-4">
+                    <p className="text-trading-gray-light italic leading-relaxed pl-4">
                       {testimonio.testimonio}
                     </p>
                   </div>
 
                   {/* Resultado */}
-                  <div className="flex items-center space-x-2 p-3 bg-green-50 rounded-xl border border-green-200">
-                    <TrendingUp className="w-4 h-4 text-green-600" />
-                    <span className="text-green-800 font-medium text-sm">
+                  <div className="flex items-center space-x-2 p-3 bg-green-900 bg-opacity-20 rounded-xl border border-green-500">
+                    <TrendingUp className="w-4 h-4 text-green-400" />
+                    <span className="text-green-300 font-medium text-sm">
                       {testimonio.resultado}
                     </span>
                   </div>
@@ -121,10 +121,10 @@ export default function TestimoniosDestacados() {
         >
           <Card className="bg-trading-gold bg-opacity-10 border-trading-gold max-w-2xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-trading-black mb-4">
+              <h3 className="text-2xl font-bold text-trading-white mb-4">
                 ¿Quieres Ser el Próximo Caso de Éxito?
               </h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-trading-gray-light mb-6">
                 Únete a cientos de traders que ya operan con método, 
                 disciplina y el apoyo de una comunidad real.
               </p>
@@ -156,7 +156,7 @@ export default function TestimoniosDestacados() {
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-sm text-gray-500 italic max-w-2xl mx-auto">
+          <p className="text-sm text-trading-gray italic max-w-2xl mx-auto">
             <strong>Nota importante:</strong> Los testimonios mostrados son casos reales de miembros del GTR. 
             Los resultados son específicos de cada persona y no representan una garantía de resultados futuros. 
             El trading conlleva riesgos y cada trader es responsable de sus decisiones.

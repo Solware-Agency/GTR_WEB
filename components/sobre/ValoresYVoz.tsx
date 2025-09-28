@@ -18,7 +18,7 @@ const diferenciales = [
 
 export default function ValoresYVoz() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-trading-black-lighter">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Propuesta de valor */}
@@ -32,11 +32,11 @@ export default function ValoresYVoz() {
             <Card className="bg-trading-gold bg-opacity-10 border-trading-gold">
               <CardContent className="p-8">
                 <Quote className="w-12 h-12 text-trading-gold mx-auto mb-6" />
-                <blockquote className="text-2xl lg:text-3xl font-bold text-trading-black mb-6 leading-tight">
+                <blockquote className="text-2xl lg:text-3xl font-bold text-trading-white mb-6 leading-tight">
                   "Comunidad diaria + método claro + gestión 1-2% + AlphaCopilot + práctica en vivo, 
                   para que operes con criterio y construyas resultados sostenibles sin estar solo."
                 </blockquote>
-                <p className="text-lg text-gray-700">
+                <p className="text-lg text-trading-gray-light">
                   — Danny Antonucci, Fundador del Global Trading Room
                 </p>
               </CardContent>
@@ -51,7 +51,7 @@ export default function ValoresYVoz() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-trading-black text-center mb-12">
+            <h2 className="text-3xl font-bold text-trading-white text-center mb-12">
               Lo que Nos Hace Diferentes
             </h2>
             
@@ -63,12 +63,12 @@ export default function ValoresYVoz() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start space-x-3 p-4 bg-trading-white rounded-xl shadow-sm"
+                  className="flex items-start space-x-3 p-4 bg-trading-black rounded-xl shadow-sm border border-trading-gold/20"
                 >
                   <div className="w-6 h-6 bg-trading-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-trading-black font-bold text-sm">✓</span>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-trading-gray-light leading-relaxed">
                     {diferencial}
                   </p>
                 </m.div>
@@ -83,14 +83,14 @@ export default function ValoresYVoz() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-trading-black text-trading-white">
+            <Card className="bg-trading-black-lighter border-trading-gold/20">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-center mb-6">
+                <h3 className="text-2xl font-bold text-trading-white text-center mb-6">
                   En Pocas Palabras
                 </h3>
                 
                 <div className="max-w-4xl mx-auto text-center">
-                  <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  <p className="text-lg text-trading-gray-light leading-relaxed mb-8">
                     Soy Danny Antonucci, trader con más de seis años. Si no querés operar solo, 
                     sumate a una comunidad que abre mercado cada mañana con método, gestión de riesgo 
                     y confluencias claras. Usamos AlphaCopilot para tener entradas más nítidas y un área 
