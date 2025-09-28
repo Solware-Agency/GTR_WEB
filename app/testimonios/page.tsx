@@ -15,7 +15,7 @@ export default function TestimoniosPage() {
         <section className="pt-20 lg:pt-24 pb-16 lg:pb-20 bg-trading-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
+              <div className="text-center mb-4">
                 <h1 className="text-4xl lg:text-5xl font-bold text-trading-black mb-6">
                   Testimonios
                 </h1>
@@ -24,11 +24,13 @@ export default function TestimoniosPage() {
                   Resultados sin promesas, con trabajo, disciplina y acompañamiento.
                 </p>
               </div>
+              
+              {/* Cards animadas infinitas justo debajo del título */}
+              <TestimoniosCarrusel />
             </div>
           </div>
         </section>
         
-        <TestimoniosCarrusel />
         <TestimoniosGrid />
         <AlertaEtica />
       </main>

@@ -155,54 +155,70 @@ export default function MetodologiaTradingRoom() {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-trading-black text-trading-white">
+            <Card className="bg-trading-black text-trading-white hover:shadow-2xl hover:shadow-trading-gold/20 transition-all duration-500 group">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-center mb-8">
+                <h3 className="text-2xl font-bold text-center mb-8 group-hover:text-trading-gold transition-colors duration-300">
                   Checklist Express (antes de apretar el botón)
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿Tengo sesgo claro por fundamental?</span>
+                  <div className="space-y-4">
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿Tengo sesgo claro por fundamental?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿EMA200 y estructura alineadas con mi idea?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿EMA200 y estructura alineadas con mi idea?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿Veo 3 confluencias mínimas?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿Veo 3 confluencias mínimas?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿SL bien puesto y R:R razonable?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿SL bien puesto y R:R razonable?</span>
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿No hay noticia inminente?</span>
+                  <div className="space-y-4">
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿No hay noticia inminente?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿El spread es aceptable?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿El spread es aceptable?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿Respeto mi límite de operaciones?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿Respeto mi límite de operaciones?</span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-trading-gold" />
-                      <span>¿Criterio y gestión por encima de la prisa?</span>
+                    <div className="group/item flex items-center space-x-3 p-3 rounded-xl hover:bg-trading-gold/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-6 h-6 bg-trading-gold/20 rounded-full flex items-center justify-center group-hover/item:bg-trading-gold group-hover/item:scale-110 transition-all duration-300">
+                        <CheckCircle className="w-4 h-4 text-trading-gold group-hover/item:text-trading-black transition-colors duration-300" />
+                      </div>
+                      <span className="group-hover/item:text-trading-gold transition-colors duration-300">¿Criterio y gestión por encima de la prisa?</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-8 p-6 bg-trading-gold bg-opacity-10 rounded-2xl text-center">
-                  <p className="text-trading-gold font-semibold text-lg">
+                <div className="mt-8 p-6 bg-trading-gold bg-opacity-10 rounded-2xl text-center hover:bg-trading-gold/20 hover:scale-[1.02] transition-all duration-300 group/quote">
+                  <p className="text-trading-gold font-semibold text-lg group-hover/quote:scale-105 transition-transform duration-300">
                     "Si no está claro, no entro. Calidad sobre cantidad, siempre."
                   </p>
                 </div>

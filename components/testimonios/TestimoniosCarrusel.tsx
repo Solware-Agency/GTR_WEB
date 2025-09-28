@@ -60,37 +60,24 @@ const LoadingCard = () => (
 
 export default function TestimoniosCarrusel() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-trading-black mb-6">
-              Casos Destacados
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Historias reales de transformación: de quemar cuentas a operar con disciplina y obtener resultados sostenibles.
-            </p>
-          </m.div>
-
-          <div className="h-[28rem] rounded-md flex flex-col antialiased bg-gray-50 items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards
-              items={testimoniosDestacados.map(testimonio => ({
-                quote: testimonio.testimonio,
-                name: testimonio.nombre,
-                title: `${testimonio.ubicacion} • ${testimonio.tiempo}`
-              }))}
-              direction="right"
-              speed="slow"
-            />
-          </div>
-        </div>
+    <m.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      viewport={{ once: true }}
+      className="-mb-16"
+    >
+      <div className="h-[24rem] rounded-md flex flex-col antialiased bg-trading-white items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={testimoniosDestacados.map(testimonio => ({
+            quote: testimonio.testimonio,
+            name: testimonio.nombre,
+            title: `${testimonio.ubicacion} • ${testimonio.tiempo}`
+          }))}
+          direction="right"
+          speed="slow"
+        />
       </div>
-    </section>
+    </m.div>
   );
 }

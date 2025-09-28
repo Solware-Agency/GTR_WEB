@@ -177,7 +177,7 @@ export default function PromoAsesorExperto() {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full border-trading-gold text-trading-gold hover:bg-trading-gold hover:text-trading-black"
+                  className="w-full border-trading-gold text-trading-black bg-trading-gold hover:bg-trading-gold hover:text-trading-black font-semibold"
                   onClick={() => window.open('https://forms.globaltradingroom.com/', '_blank')}
                 >
                   Obtener Acceso
