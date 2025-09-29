@@ -42,10 +42,7 @@ export default function ContactoPage() {
               <div className="mt-16">
                   <Card className="bg-gradient-to-br from-trading-gold/5 to-trading-gold/10 border-trading-gold/30 shadow-lg">
                     <CardContent className="p-8">
-                      <div className="flex items-center space-x-4 mb-8">
-                        <div className="w-12 h-12 bg-trading-gold/20 rounded-2xl flex items-center justify-center">
-                          <div className="text-2xl">💡</div>
-                        </div>
+                      <div className="mb-8">
                         <h3 className="text-2xl font-bold text-trading-white">
                           Preguntas Frecuentes
                         </h3>

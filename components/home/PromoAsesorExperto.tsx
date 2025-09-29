@@ -62,56 +62,80 @@ export default function PromoAsesorExperto() {
             </p>
           </m.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Visual del EA */}
-            <m.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-trading-gold to-trading-gold-light rounded-3xl p-8 shadow-2xl">
-                <div className="bg-trading-black rounded-2xl p-6 mb-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Bot className="w-8 h-8 text-trading-gold" />
-                    <span className="text-trading-white font-bold text-lg">AlphaCopilot v2.0</span>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-trading-white">
-                      <span>Sesgo Actual:</span>
-                      <span className="text-green-400 font-semibold">ALCISTA</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Columna izquierda - Visual del EA y Limitaciones */}
+            <div className="space-y-8">
+              {/* Visual del EA */}
+              <m.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-trading-gold to-trading-gold-light rounded-3xl p-8 shadow-2xl">
+                  <div className="bg-trading-black rounded-2xl p-6 mb-6">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <Bot className="w-8 h-8 text-trading-gold" />
+                      <span className="text-trading-white font-bold text-lg">AlphaCopilot v2.0</span>
                     </div>
                     
-                    <div className="flex items-center justify-between text-trading-white">
-                      <span>Calidad Zona:</span>
-                      <div className="flex space-x-1">
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between text-trading-white">
+                        <span>Sesgo Actual:</span>
+                        <span className="text-green-400 font-semibold">ALCISTA</span>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-trading-white">
+                        <span>Calidad Zona:</span>
+                        <div className="flex space-x-1">
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-trading-white">
+                        <span>Estado:</span>
+                        <span className="text-trading-gold font-semibold">ACTIVO</span>
                       </div>
                     </div>
-                    
-                    <div className="flex items-center justify-between text-trading-white">
-                      <span>Estado:</span>
-                      <span className="text-trading-gold font-semibold">ACTIVO</span>
-                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Zap className="w-12 h-12 text-trading-black mx-auto mb-3" />
+                    <p className="text-trading-black font-semibold">
+                      Análisis en tiempo real
+                    </p>
                   </div>
                 </div>
-                
-                <div className="text-center">
-                  <Zap className="w-12 h-12 text-trading-black mx-auto mb-3" />
-                  <p className="text-trading-black font-semibold">
-                    Análisis en tiempo real
-                  </p>
-                </div>
-              </div>
-              
+              </m.div>
 
-            </m.div>
+              {/* Limitaciones importantes */}
+              <m.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Card className="bg-red-900 bg-opacity-20 border-red-500 border-opacity-30">
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-semibold text-red-300 mb-3">
+                      ⚠️ Limitaciones Importantes
+                    </h4>
+                    <ul className="text-red-200 text-sm space-y-2">
+                      <li>• No ejecuta operaciones automáticamente</li>
+                      <li>• No define Stop Loss ni Take Profit</li>
+                      <li>• No garantiza resultados ni precisión al 100%</li>
+                      <li>• Funciona exclusivamente en cuentas HFM</li>
+                      <li>• Es un copiloto, no un piloto automático</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </m.div>
+            </div>
 
-            {/* Funcionalidades */}
+            {/* Columna derecha - Funcionalidades y CTAs */}
             <m.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -133,16 +157,16 @@ export default function PromoAsesorExperto() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="flex items-start space-x-4"
+                      className="flex items-start space-x-4 group cursor-pointer hover:bg-trading-gold/5 p-4 rounded-xl transition-all duration-300"
                     >
-                      <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <IconoComponente className="w-6 h-6 text-trading-gold" />
+                      <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-trading-gold/30 group-hover:scale-110 transition-all duration-300">
+                        <IconoComponente className="w-6 h-6 text-trading-gold group-hover:text-trading-gold-light transition-colors duration-300" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-trading-white mb-2">
+                        <h4 className="text-lg font-semibold text-trading-white mb-2 group-hover:text-trading-gold transition-colors duration-300">
                           {item.titulo}
                         </h4>
-                        <p className="text-trading-gray-light">
+                        <p className="text-trading-gray-light group-hover:text-trading-gray-light/80 transition-colors duration-300">
                           {item.descripcion}
                         </p>
                       </div>
@@ -150,22 +174,6 @@ export default function PromoAsesorExperto() {
                   );
                 })}
               </div>
-
-              {/* Limitaciones importantes */}
-              <Card className="bg-red-900 bg-opacity-20 border-red-500 border-opacity-30 mb-8">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold text-red-300 mb-3">
-                    ⚠️ Limitaciones Importantes
-                  </h4>
-                  <ul className="text-red-200 text-sm space-y-2">
-                    <li>• No ejecuta operaciones automáticamente</li>
-                    <li>• No define Stop Loss ni Take Profit</li>
-                    <li>• No garantiza resultados ni precisión al 100%</li>
-                    <li>• Funciona exclusivamente en cuentas HFM</li>
-                    <li>• Es un copiloto, no un piloto automático</li>
-                  </ul>
-                </CardContent>
-              </Card>
 
               <div className="space-y-4">
                 <Link href="/asesor-experto">

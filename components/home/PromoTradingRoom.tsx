@@ -144,10 +144,10 @@ export default function PromoTradingRoom() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="flex items-center space-x-3"
+                        className="flex items-center space-x-3 group cursor-pointer hover:bg-trading-gold/5 p-2 rounded-lg transition-all duration-300"
                       >
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-trading-gray-light">{beneficio}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 group-hover:text-green-400 group-hover:scale-110 transition-all duration-300" />
+                        <span className="text-trading-gray-light group-hover:text-trading-white transition-colors duration-300">{beneficio}</span>
                       </m.div>
                     ))}
                   </div>

@@ -63,12 +63,12 @@ export default function ValoresYVoz() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start space-x-3 p-4 bg-trading-black rounded-xl shadow-sm border border-trading-gold/20"
+                  className="flex items-start space-x-3 p-4 bg-trading-black rounded-xl shadow-sm border border-trading-gold/20 group cursor-pointer hover:bg-trading-gold/5 hover:border-trading-gold/40 hover:shadow-lg hover:shadow-trading-gold/10 transition-all duration-300"
                 >
-                  <div className="w-6 h-6 bg-trading-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-trading-black font-bold text-sm">✓</span>
+                  <div className="w-6 h-6 bg-trading-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:bg-trading-gold-light group-hover:scale-110 transition-all duration-300">
+                    <span className="text-trading-black font-bold text-sm group-hover:text-trading-black transition-colors duration-300">✓</span>
                   </div>
-                  <p className="text-trading-gray-light leading-relaxed">
+                  <p className="text-trading-gray-light leading-relaxed group-hover:text-trading-white transition-colors duration-300">
                     {diferencial}
                   </p>
                 </m.div>
