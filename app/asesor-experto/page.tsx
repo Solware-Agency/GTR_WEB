@@ -158,17 +158,17 @@ export default function AsesorExpertoPage() {
                     const IconoComponente = func.icono;
                     
                     return (
-                      <Card key={func.titulo} className="hover:shadow-lg transition-all duration-300">
+                      <Card key={func.titulo} className="hover:shadow-lg hover:shadow-trading-gold/20 hover:border-trading-gold/40 transition-all duration-300 group cursor-pointer">
                         <CardContent className="p-6">
                           <div className="flex items-start space-x-4">
-                            <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0">
-                              <IconoComponente className="w-6 h-6 text-trading-gold" />
+                            <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-trading-gold/30 group-hover:scale-110 transition-all duration-300">
+                              <IconoComponente className="w-6 h-6 text-trading-gold group-hover:text-trading-gold-light transition-colors duration-300" />
                             </div>
                             <div>
-                              <h4 className="text-lg font-semibold text-trading-white mb-2">
+                              <h4 className="text-lg font-semibold text-trading-white mb-2 group-hover:text-trading-gold transition-colors duration-300">
                                 {func.titulo}
                               </h4>
-                              <p className="text-trading-gray-light text-sm">
+                              <p className="text-trading-gray-light text-sm group-hover:text-trading-gray-light/80 transition-colors duration-300">
                                 {func.descripcion}
                               </p>
                             </div>

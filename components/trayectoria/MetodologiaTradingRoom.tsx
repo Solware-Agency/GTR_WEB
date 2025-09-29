@@ -81,27 +81,27 @@ export default function MetodologiaTradingRoom() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full hover:shadow-xl transition-all duration-300">
+                  <Card className="h-full hover:shadow-xl hover:shadow-trading-gold/20 hover:border-trading-gold/40 transition-all duration-300 group cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center">
-                          <IconoComponente className="w-6 h-6 text-trading-gold" />
+                        <div className="w-12 h-12 bg-trading-gold bg-opacity-20 rounded-xl flex items-center justify-center group-hover:bg-trading-gold/30 group-hover:scale-110 transition-all duration-300">
+                          <IconoComponente className="w-6 h-6 text-trading-gold group-hover:text-trading-gold-light transition-colors duration-300" />
                         </div>
-                        <h3 className="text-lg font-bold text-trading-white">
+                        <h3 className="text-lg font-bold text-trading-white group-hover:text-trading-gold transition-colors duration-300">
                           {principio.titulo}
                         </h3>
                       </div>
                       
-                      <p className="text-trading-gray-light leading-relaxed mb-4">
+                      <p className="text-trading-gray-light leading-relaxed mb-4 group-hover:text-trading-gray-light/80 transition-colors duration-300">
                         {principio.descripcion}
                       </p>
                       
                       <div className="space-y-2">
-                        <h4 className="font-semibold text-trading-white text-sm">Ejemplos:</h4>
+                        <h4 className="font-semibold text-trading-white text-sm group-hover:text-trading-gold transition-colors duration-300">Ejemplos:</h4>
                         {principio.ejemplos.map((ejemplo, i) => (
-                          <div key={i} className="flex items-start space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                            <span className="text-sm text-trading-gray-light">{ejemplo}</span>
+                          <div key={i} className="flex items-start space-x-2 group-hover:translate-x-1 transition-transform duration-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5 group-hover:text-green-300 group-hover:scale-110 transition-all duration-300" />
+                            <span className="text-sm text-trading-gray-light group-hover:text-trading-white transition-colors duration-300">{ejemplo}</span>
                           </div>
                         ))}
                       </div>

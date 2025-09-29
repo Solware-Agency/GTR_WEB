@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { m } from 'framer-motion';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
@@ -57,6 +57,88 @@ const bloques = [
   }
 ];
 
+// Componente para la card con efecto spotlight
+function SpotlightCard({ bloque, index }: { bloque: any, index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    setMousePosition({ x, y });
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const IconoComponente = bloque.icono;
+
+  return (
+    <m.div
+      key={bloque.titulo}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
+    >
+      <Link href={bloque.href}>
+        <div
+          ref={cardRef}
+          className="relative overflow-hidden rounded-lg cursor-pointer h-full"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {/* Efecto spotlight */}
+          <div
+            className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ease-out ${
+              isHovered ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 215, 0, 0.12), transparent 50%)`,
+            }}
+          />
+          
+          {/* Card content */}
+          <Card className={`${bloque.color} hover:shadow-xl hover:shadow-trading-gold/20 transition-all duration-300 group h-full border-0 ${
+            isHovered ? 'ring-1 ring-trading-gold/30' : ''
+          }`}>
+            <CardContent className="p-8 relative z-10">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-trading-black rounded-xl flex items-center justify-center shadow-sm">
+                  <IconoComponente className={`w-6 h-6 ${bloque.iconColor}`} />
+                </div>
+                <h3 className="text-xl font-bold text-trading-white">
+                  {bloque.titulo}
+                </h3>
+              </div>
+              
+              <p className="text-trading-gray-light leading-relaxed mb-6">
+                {bloque.descripcion}
+              </p>
+              
+              <div className="flex items-center text-trading-gold font-semibold group-hover:translate-x-2 transition-transform duration-200">
+                <span>Explorar</span>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </Link>
+    </m.div>
+  );
+}
+
 export default function BloquesCTAs() {
   return (
     <section className="py-20 bg-trading-black">
@@ -78,43 +160,9 @@ export default function BloquesCTAs() {
         </m.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {bloques.map((bloque, index) => {
-            const IconoComponente = bloque.icono;
-            
-            return (
-              <m.div
-                key={bloque.titulo}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link href={bloque.href}>
-                  <Card className={`${bloque.color} hover:shadow-xl transition-all duration-300 group cursor-pointer h-full`}>
-                    <CardContent className="p-8">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-trading-black rounded-xl flex items-center justify-center shadow-sm">
-                          <IconoComponente className={`w-6 h-6 ${bloque.iconColor}`} />
-                        </div>
-                        <h3 className="text-xl font-bold text-trading-white">
-                          {bloque.titulo}
-                        </h3>
-                      </div>
-                      
-                      <p className="text-trading-gray-light leading-relaxed mb-6">
-                        {bloque.descripcion}
-                      </p>
-                      
-                      <div className="flex items-center text-trading-gold font-semibold group-hover:translate-x-2 transition-transform duration-200">
-                        <span>Explorar</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </m.div>
-            );
-          })}
+          {bloques.map((bloque, index) => (
+            <SpotlightCard key={bloque.titulo} bloque={bloque} index={index} />
+          ))}
         </div>
 
         {/* CTA de contacto */}

@@ -148,17 +148,17 @@ export default function CursosPage() {
               {/* Cursos disponibles */}
               <div className="space-y-8">
                 {cursosDisponibles.map((curso, index) => (
-                  <Card key={curso.slug} className={`${curso.color} hover:shadow-xl transition-all duration-300`}>
+                  <Card key={curso.slug} className={`${curso.color} hover:shadow-xl hover:shadow-trading-gold/20 hover:border-trading-gold/40 transition-all duration-300 group cursor-pointer`}>
                     <CardContent className="p-8">
                       <div className="grid lg:grid-cols-3 gap-8">
                         <div className="lg:col-span-2">
                           <div className="flex items-center space-x-3 mb-4">
-                            <GraduationCap className={`w-8 h-8 ${curso.iconColor}`} />
+                            <GraduationCap className={`w-8 h-8 ${curso.iconColor} group-hover:text-trading-gold-light group-hover:scale-110 transition-all duration-300`} />
                             <div>
-                              <h3 className="text-2xl font-bold text-trading-white">
+                              <h3 className="text-2xl font-bold text-trading-white group-hover:text-trading-gold transition-colors duration-300">
                                 {curso.titulo}
                               </h3>
-                              <div className="flex items-center space-x-4 text-sm text-trading-gray-light">
+                              <div className="flex items-center space-x-4 text-sm text-trading-gray-light group-hover:text-trading-white transition-colors duration-300">
                                 <span className="font-semibold">{curso.nivel}</span>
                                 <span>•</span>
                                 <span>{curso.duracion}</span>
@@ -166,21 +166,21 @@ export default function CursosPage() {
                             </div>
                           </div>
                           
-                          <p className="text-trading-gray-light leading-relaxed mb-6">
+                          <p className="text-trading-gray-light leading-relaxed mb-6 group-hover:text-trading-gray-light/80 transition-colors duration-300">
                             {curso.descripcion}
                           </p>
                           
                           <div className="grid md:grid-cols-2 gap-4">
                             {curso.modulos.slice(0, 6).map((modulo, i) => (
-                              <div key={i} className="flex items-center space-x-2">
-                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                                <span className="text-sm text-trading-gray-light">{modulo}</span>
+                              <div key={i} className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-300">
+                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 group-hover:text-green-400 group-hover:scale-110 transition-all duration-300" />
+                                <span className="text-sm text-trading-gray-light group-hover:text-trading-white transition-colors duration-300">{modulo}</span>
                               </div>
                             ))}
                           </div>
                           
                           {curso.modulos.length > 6 && (
-                            <p className="text-sm text-trading-gray mt-4">
+                            <p className="text-sm text-trading-gray mt-4 group-hover:text-trading-gray-light transition-colors duration-300">
                               + {curso.modulos.length - 6} módulos adicionales
                             </p>
                           )}
